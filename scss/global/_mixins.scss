@@ -1,0 +1,21 @@
+@use './colors' as *;
+@use './fonts' as *;
+
+
+@mixin all-center ($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg-pic-config ($attach) {
+    background-repeat: no-repeat !important;
+    background-attachment: $attach !important;
+    background-position: center center !important;
+    z-index: auto;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}

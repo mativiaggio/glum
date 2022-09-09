@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*The following line prevents the navbar to obscure the elements.*/
+html {
+  scroll-padding-top: 67px; /* height of sticky navbar */
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+nav #navbarSupportedContent {
+  transition: all 0.2s ease 0s;
+}
+
+.navbar {
+  background-color: hsl(206deg, 97%, 15%);
+  /* State when the navbar is collapsed */
+  /* when navigation is clicked */
+  /* Color of 3 lines */
+}
+.navbar .navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  border: 0 !important;
+}
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.navbar .navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+.navbar .toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: hsl(358deg, 97%, 31%);
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.navbar .middle-bar {
+  margin-top: 0px;
+}
+.navbar .navbar-toggler.collapsed .top-bar {
+  position: absolute;
+  top: 0px;
+  transform: rotate(0deg);
+}
+.navbar .navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+  filter: alpha(opacity=100);
+}
+.navbar .navbar-toggler.collapsed .bottom-bar {
+  position: absolute;
+  top: 20px;
+  transform: rotate(0deg);
+}
+.navbar .navbar-toggler .top-bar {
+  top: inherit;
+  transform: rotate(135deg);
+}
+.navbar .navbar-toggler .middle-bar {
+  opacity: 0;
+  top: inherit;
+  filter: alpha(opacity=0);
+}
+.navbar .navbar-toggler .bottom-bar {
+  top: inherit;
+  transform: rotate(-135deg);
+}
+.navbar .navbar-toggler.collapsed .toggler-icon {
+  background-color: hsl(0deg, 0%, 85%);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-family: "Tiro Bangla", serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 28px !important;
+  text-transform: uppercase !important;
+  margin-left: 15px !important;
+}
+
+.nav-link {
+  color: white !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  border: 2px solid rgba(255, 255, 255, 0) !important;
+  margin-left: 20px !important;
+}
+.nav-link:hover {
+  text-decoration: underline !important;
+}
+@media screen and (max-width: 62em) {
+  .nav-link {
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 62em) {
+  .navbar-nav .nav-item {
+    width: 50%;
+  }
+}
+.navbar-nav .nav-item .btn-delivery {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  border: 2px solid white !important;
+  border-radius: 50px !important;
+  margin-left: 36px !important;
+}
+.navbar-nav .nav-item .btn-delivery:hover {
+  text-decoration: none !important;
+  background-color: white !important;
+  color: hsl(206deg, 97%, 15%) !important;
+}
+@media screen and (max-width: 62em) {
+  .navbar-nav .nav-item .btn-delivery {
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+@media screen and (max-width: 62em) {
+  .navbar-nav .nav-item {
+    width: 50%;
+  }
+}
+.navbar-nav .nav-item .btn-reserva {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  border: 2px solid white !important;
+  border-radius: 50px !important;
+  background-color: white !important;
+  color: hsl(206deg, 97%, 15%) !important;
+  margin-left: 36px !important;
+}
+.navbar-nav .nav-item .btn-reserva:hover {
+  text-decoration: none !important;
+  background-color: hsl(206deg, 97%, 15%) !important;
+  color: white !important;
+}
+@media screen and (max-width: 62em) {
+  .navbar-nav .nav-item .btn-reserva {
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+
+header {
+  height: 100vh;
+  background-image: url("../assets/img/albert-YYZU0Lo1uXE-unsplash.jpg");
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+}
+header .i-header-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 62.1em) {
+  header .i-header-c {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 62em) {
+  header .i-header-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+header .index-header-title {
+  margin-top: 60px;
+  height: 300px;
+  width: 300px;
+  background: rgba(217, 217, 217, 0.5);
+  border: 4px solid #FFFFFF;
+  backdrop-filter: blur(5px);
+}
+header .index-header-title h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 80px;
+  text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+main .info-bar .icons-info {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 62em) {
+  main .info-bar .icons-info {
+    height: 100vh;
+    flex-direction: column;
+  }
+}
+main .info-bar .icons-info .info-1, main .info-bar .icons-info .info-2, main .info-bar .icons-info .info-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+}
+main .info-bar .icons-info .info-1 img, main .info-bar .icons-info .info-2 img, main .info-bar .icons-info .info-3 img {
+  height: 50px;
+}
+main .info-bar .icons-info .info-1 p, main .info-bar .icons-info .info-2 p, main .info-bar .icons-info .info-3 p {
+  width: 200px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(198deg, 57%, 40%);
+}
+main .info-bar .info-bar-pic {
+  height: 50vh;
+  background-image: url("../assets/img/albert-uP8Xnw5XRB0-unsplash.jpg");
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+}
+main .quienes-somos {
+  height: fit-content;
+}
+main .quienes-somos h1 {
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+}
+main .quienes-somos .quienes-somos-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 62em) {
+  main .quienes-somos .quienes-somos-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main .quienes-somos .quienes-somos-content .qs-text-container {
+  width: 500px;
+}
+@media screen and (max-width: 62em) {
+  main .quienes-somos .quienes-somos-content .qs-text-container {
+    width: auto;
+  }
+}
+main .quienes-somos .quienes-somos-content .qs-text-container p {
+  font-weight: 400;
+  font-size: 24px;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: start;
+  letter-spacing: 2px;
+  margin-left: 20%;
+  color: hsl(205deg, 98%, 20%);
+}
+@media screen and (max-width: 62em) {
+  main .quienes-somos .quienes-somos-content .qs-text-container p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 15px;
+    line-height: 50px;
+  }
+}
+main .quienes-somos .quienes-somos-content img {
+  height: 450px;
+}
+@media screen and (max-width: 62em) {
+  main .quienes-somos .quienes-somos-content img {
+    height: 350px;
+  }
+}
+main .contactanos {
+  height: 80vh;
+  background-image: url(/assets/img/albert-1v72w9EhcWQ-unsplash.jpg);
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+}
+@media screen and (max-width: 64em) {
+  main .contactanos {
+    height: 200vh;
+  }
+}
+main .contactanos .contactanos-bg-filter {
+  height: 80vh;
+  background-color: rgba(116, 116, 116, 0.452);
+  backdrop-filter: blur(4px);
+}
+@media screen and (max-width: 64em) {
+  main .contactanos .contactanos-bg-filter {
+    height: 200vh;
+  }
+}
+main .contactanos .contactanos-bg-filter .c-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .contactanos .contactanos-bg-filter .c-title-container h1 {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+main .contactanos .contactanos-bg-filter .c-cards-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+}
+@media screen and (max-width: 64em) {
+  main .contactanos .contactanos-bg-filter .c-cards-container {
+    flex-direction: column;
+  }
+}
+main .contactanos .contactanos-bg-filter .c-cards-container .card {
+  height: 275px;
+  width: 253px;
+  border-radius: 15px 15px 50px 50px;
+}
+@media screen and (max-width: 64em) {
+  main .contactanos .contactanos-bg-filter .c-cards-container .card {
+    margin-bottom: 150px;
+  }
+}
+main .contactanos .contactanos-bg-filter .c-cards-container .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .contactanos .contactanos-bg-filter .c-cards-container .card .card-body img {
+  height: 80px;
+  margin-bottom: 20px;
+}
+main .contactanos .contactanos-bg-filter .c-cards-container .card .card-body h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  text-align: center;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+}
+main .contactanos .contactanos-bg-filter .c-cards-container .card .c-a-container {
+  outline: 1px solid hsl(206deg, 97%, 15%);
+  background-color: hsl(206deg, 97%, 15%);
+  width: 100%;
+  height: 50px;
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .contactanos .contactanos-bg-filter .c-cards-container .card .c-a-container a {
+  background-color: hsl(206deg, 97%, 15%);
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+footer {
+  height: fit-content;
+  background-color: hsl(206deg, 97%, 15%);
+}
+footer .footer-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+footer .footer-title-container h1 {
+  color: white !important;
+  font-family: "Tiro Bangla", serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 76px !important;
+  text-transform: uppercase !important;
+  margin-left: 15px !important;
+}
+footer .footer-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-navbar .footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-navbar .footer-links li {
+  list-style: none;
+}
+footer .footer-navbar .footer-links li a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+footer .footer-navbar .footer-links li a:hover {
+  text-decoration: underline;
+}
+footer .footer-navbar .footer-navbar-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-navbar .footer-navbar-buttons .a-delivery-footer .btn-delivery-footer {
+  background-color: rgba(255, 255, 255, 0);
+  height: 60px;
+  width: 185px;
+  font-size: 30px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 3px solid white;
+  text-transform: uppercase;
+  float: right;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+footer .footer-navbar .footer-navbar-buttons .a-delivery-footer .btn-delivery-footer:hover {
+  text-decoration: none !important;
+  background-color: white !important;
+  color: hsl(206deg, 97%, 15%) !important;
+}
+footer .footer-navbar .footer-navbar-buttons .a-reserva-footer {
+  list-style: none;
+}
+footer .footer-navbar .footer-navbar-buttons .a-reserva-footer .btn-reserva-footer {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 250px;
+  font-size: 30px;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 3px solid white;
+  text-transform: uppercase;
+}
+footer .footer-navbar .footer-navbar-buttons .a-reserva-footer .btn-reserva-footer:hover {
+  text-decoration: none !important;
+  background-color: hsl(206deg, 97%, 15%) !important;
+  color: white !important;
+}
+footer .footer-navbar p {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

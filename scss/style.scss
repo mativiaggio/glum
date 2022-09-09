@@ -1,0 +1,258 @@
+@use './global/' as *;
+@use './index-folder-styles/' as *;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  // outline: red solid 1px;
+}
+
+/*The following line prevents the navbar to obscure the elements.*/
+html {
+  scroll-padding-top: 67px; /* height of sticky navbar */
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $ff-body;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+// @media (prefers-reduced-motion: reduce) {
+//   html:focus-within {
+//    scroll-behavior: auto;
+//   }
+
+//   *,
+//   *::before,
+//   *::after {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//     scroll-behavior: auto !important;
+//   }
+// }
+nav {
+  #navbarSupportedContent {
+      transition: all 0.2s ease 0s;
+  }
+}
+.navbar {
+  background-color: $clr-main-dark;
+  @include better-navbar;
+}
+.navbar-brand {
+  @include navbar-logo;
+}
+.nav-link {
+  @include navbar-links;
+}
+.navbar-nav {
+  @include all-center(column);
+  @include navbar-deli;
+  @include navbar-reserv;
+}
+
+// HEADER STYLES
+header {
+  height: 100vh;
+  background-image: url('../assets/img/albert-YYZU0Lo1uXE-unsplash.jpg');
+  @include bg-pic-config(scroll);
+  .i-header-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include header-mquery;
+  }
+  .index-header-title {
+    @include index-header-title
+  }
+}
+
+// MAIN STYLES
+main {
+  .info-bar {
+    .icons-info {
+      @include icons-info;
+      @include i-main-info;
+    }
+    .info-bar-pic {
+      height: 50vh;
+      background-image: url('../assets/img/albert-uP8Xnw5XRB0-unsplash.jpg');
+      @include bg-pic-config(fixed);
+    }
+  }
+  .quienes-somos {
+    height: fit-content;
+    h1 {
+      margin: 20px 0;
+      @include i-main-qs-h1
+    }
+    .quienes-somos-content {
+      @include quienes-somos-content;
+    }
+  }
+  .contactanos {
+    height: 80vh;
+    background-image: url(/assets/img/albert-1v72w9EhcWQ-unsplash.jpg);
+    @media screen and (max-width: 64em){
+      height: 200vh;
+    }
+    @include bg-pic-config(fixed);
+    .contactanos-bg-filter {
+      @include contactanos-bg-filter;
+    }
+  }
+}
+
+footer {
+  height: fit-content;
+  background-color: $clr-main-dark;
+  .footer-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    h1 {
+      color: white !important;
+      font-family: $ff-logo !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 76px !important;
+      text-transform: uppercase !important;
+      margin-left: 15px !important;
+
+    }
+  }
+  .footer-navbar {
+    @include all-center(column);
+    .footer-links{
+      @include all-center(column);
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-family: $ff-body;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 50px;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .footer-navbar-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .a-delivery-footer {
+        .btn-delivery-footer {
+          background-color: rgba(255, 255, 255, 0);
+          height: 60px;
+          width: 185px;
+          font-size: 30px;
+          color: white;
+          font-family: $ff-body;
+          font-weight: 700;
+          border-radius: 50px;
+          border: 3px solid white;
+          text-transform: uppercase;
+          float: right;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          &:hover {
+            text-decoration: none !important;
+            background-color: white !important;
+            color: $clr-main-dark !important;
+        }
+        }
+      }
+      .a-reserva-footer {
+        list-style: none;
+        .btn-reserva-footer {
+          background-color: rgb(255, 255, 255);
+          height: 60px;
+          width: 250px;
+          font-size: 30px;
+          color: $clr-main-dark;
+          font-family: $ff-body;
+          font-weight: 700;
+          border-radius: 50px;
+          border: 3px solid white;
+          text-transform: uppercase;
+          &:hover {
+              text-decoration: none !important;
+              background-color: $clr-main-dark !important;
+              color: white !important;
+          }
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-family: $ff-body;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+    }
+  }
+}

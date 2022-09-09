@@ -1,0 +1,156 @@
+@use '../global/' as *;
+
+@mixin icons-info {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;  
+    @media screen and (max-width: 62em) {
+        height: 100vh;
+        flex-direction: column;
+    }
+}
+
+@mixin i-main-info {
+    .info-1, .info-2, .info-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+        img {
+            height: 50px;
+        }
+        p {
+            width: 200px;
+            font-weight: 700;
+            font-size: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $clr-main-cont;
+        }
+    }
+}
+
+@mixin i-main-qs-h1 {
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $clr-main-dark;
+}
+
+@mixin quienes-somos-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (max-width: 62em) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .qs-text-container {
+    width: 500px;
+    @media screen and (max-width: 62em) {
+        width: auto;
+    }
+    p {
+        font-weight: 400;
+        font-size: 24px;
+        align-items: center;
+        text-transform: uppercase;
+        text-align: start;
+        letter-spacing: 2px;
+        margin-left: 20%;
+        color: $clr-main-font;
+        @media screen and (max-width: 62em) {
+        text-align: center;
+        font-size: 18px;
+        margin: 0 15px;
+        line-height: 50px;
+        }
+    }
+    }
+    img {
+    height: 450px;
+    @media screen and (max-width: 62em) {
+        height: 350px;
+    }
+    }
+}
+
+@mixin contactanos-bg-filter{
+    height: 80vh;
+    background-color: rgba(116, 116, 116, 0.452);
+    backdrop-filter: blur(4px);
+    @media screen and (max-width: 64em){
+        height: 200vh;
+    }
+    .c-title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            text-transform: uppercase;
+            font-family: $ff-body;
+            font-weight: 700;
+            font-size: 34px;
+            text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+            color: white;
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+    }
+    .c-cards-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: fit-content;
+        @media screen and (max-width: 64em){
+            flex-direction: column;
+        }
+        .card{
+            height: 275px;
+            width: 253px;
+            border-radius: 15px 15px 50px 50px;
+            @media screen and (max-width: 64em){
+                margin-bottom: 150px;
+            }
+            .card-body {
+                @include all-center(column);
+                img {
+                    height: 80px;
+                    margin-bottom: 20px;
+                }
+                h5 {
+                    font-family: $ff-body;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 44px;
+                    text-align: center;
+                    text-decoration-line: underline;
+                    text-transform: uppercase;
+                    color: $clr-main-dark;
+                }
+            }
+            .c-a-container {
+                outline: 1px solid $clr-main-dark;
+                
+                background-color: $clr-main-dark;
+                width: 100%;
+                height: 50px;
+                border-radius: 0px 0px 15px 15px;
+                @include all-center(column);
+                a {
+                    background-color: $clr-main-dark;
+                    text-align: center;
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: $ff-body;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
