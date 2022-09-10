@@ -1,11 +1,12 @@
 @use './global/' as *;
 @use './index-folder-styles/' as *;
+@use './menu-folder-styles/' as *;
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  // outline: red solid 1px;
+  outline: red solid 1px;
 }
 
 /*The following line prevents the navbar to obscure the elements.*/
@@ -188,74 +189,7 @@ footer {
 // MENU 
 
 header {
-  .m-title-row {
-    height: fit-content;
-    min-height: 30vh;
-    padding-top: 65px;
-    .nm-title-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .title-icon-container {
-        width: fit-content;
-        padding-top: 15px;
-        h1 {
-          font-family: 'Montserrat';
-          font-style: normal;
-          font-weight: 800;
-          font-size: 48px;
-          line-height: 59px;
-          color: $clr-main-font;
-          text-transform: uppercase;
-        }
-        .menu-title-icons {
-          display: flex;
-          justify-content: space-between;
-          img {
-            height: 25px;
-          }
-        }
-      }
-    }
-  }
-  .m-indice-row {
-    height: fit-content;
-    min-height: 70vh;
-    margin: 0 10px 20px 10px;
-    background-color: $clr-bg-content;
-    .nm-indice-container {
-      h1 {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 59px;
-        text-transform: uppercase;
-        color: $clr-main-font;
-      }
-    }
-    .indice-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h5 {
-        text-transform: uppercase;
-      }
-      ul {
-        list-style: none;
-        margin: 0px;
-	      padding: 0px;
-        li {
-          text-align: center;
-          a {
-            text-decoration: none;
-            color: $clr-main-dark;
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
+  @include menu-header;
 }
 
 .hr {
@@ -264,4 +198,30 @@ header {
 }
 #hr-up {
   margin-top: 15px;
+}
+
+.imenu-title-row {
+  height: fit-content;
+  .menu-section-title-container {
+    height: fit-content;
+    .menu-section-title {
+      background-color: $clr-bg-content;
+      height: 100px;
+      margin: 0 10px 0 10px;
+      @include all-center(column);
+      h3 {
+        font-family: $ff-body;
+        color: $clr-main-font;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.imenu-row {
+  .im-img-container {
+    .im-img {
+      margin: 0 0 0 10px;
+    }
+  }
 }
