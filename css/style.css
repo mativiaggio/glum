@@ -231,8 +231,9 @@ nav #navbarSupportedContent {
   }
 }
 
-header {
-  height: 100vh;
+.index-header {
+  height: fit-content;
+  min-height: 100vh;
   background-image: url("../assets/img/albert-YYZU0Lo1uXE-unsplash.jpg");
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
@@ -243,25 +244,25 @@ header {
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
 }
-header .i-header-c {
+.index-header .i-header-c {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media screen and (min-width: 62.1em) {
-  header .i-header-c {
+  .index-header .i-header-c {
     margin-left: 100px;
   }
 }
 @media screen and (max-width: 62em) {
-  header .i-header-c {
+  .index-header .i-header-c {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
-header .index-header-title {
+.index-header .index-header-title {
   margin-top: 60px;
   height: 300px;
   width: 300px;
@@ -269,11 +270,30 @@ header .index-header-title {
   border: 4px solid #FFFFFF;
   backdrop-filter: blur(5px);
 }
-header .index-header-title h1 {
+.index-header .index-header-title h1 {
   color: white;
   text-transform: uppercase;
   font-size: 80px;
   text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
+}
+.index-header .index-cta {
+  margin-top: 20px;
+}
+.index-header .index-cta a button {
+  background-color: white;
+  width: fit-content;
+  font-size: x-large;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-radius: 50px;
+  color: hsl(206deg, 97%, 15%);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.459);
+}
+.index-header .index-cta a button:hover {
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+  border-color: hsl(206deg, 97%, 15%);
 }
 
 main .info-bar .icons-info {
@@ -320,6 +340,7 @@ main .info-bar .info-bar-pic {
 }
 main .quienes-somos {
   height: fit-content;
+  min-height: 100vh;
 }
 main .quienes-somos h1 {
   margin: 20px 0;
@@ -376,7 +397,8 @@ main .quienes-somos .quienes-somos-content img {
   }
 }
 main .contactanos {
-  height: 80vh;
+  height: fit-content;
+  min-height: 100vh;
   background-image: url(/assets/img/albert-1v72w9EhcWQ-unsplash.jpg);
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
@@ -393,7 +415,7 @@ main .contactanos {
   }
 }
 main .contactanos .contactanos-bg-filter {
-  height: 80vh;
+  height: 100vh;
   background-color: rgba(116, 116, 116, 0.452);
   backdrop-filter: blur(4px);
 }
@@ -481,6 +503,7 @@ main .contactanos .contactanos-bg-filter .c-cards-container .card .c-a-container
 
 footer {
   height: fit-content;
+  min-height: 60vh;
   background-color: hsl(206deg, 97%, 15%);
 }
 footer .footer-title-container {
@@ -494,9 +517,8 @@ footer .footer-title-container h1 {
   font-family: "Tiro Bangla", serif !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 76px !important;
+  font-size: 36px !important;
   text-transform: uppercase !important;
-  margin-left: 15px !important;
 }
 footer .footer-navbar {
   display: flex;
@@ -518,7 +540,7 @@ footer .footer-navbar .footer-links li a {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 50px;
   text-transform: uppercase;
   text-decoration: none;
@@ -535,9 +557,9 @@ footer .footer-navbar .footer-navbar-buttons {
 }
 footer .footer-navbar .footer-navbar-buttons .a-delivery-footer .btn-delivery-footer {
   background-color: rgba(255, 255, 255, 0);
-  height: 60px;
-  width: 185px;
-  font-size: 30px;
+  height: 50px;
+  width: 175px;
+  font-size: 20px;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -558,9 +580,9 @@ footer .footer-navbar .footer-navbar-buttons .a-reserva-footer {
 }
 footer .footer-navbar .footer-navbar-buttons .a-reserva-footer .btn-reserva-footer {
   background-color: rgb(255, 255, 255);
-  height: 60px;
-  width: 250px;
-  font-size: 30px;
+  height: 50px;
+  width: 240px;
+  font-size: 20px;
   color: hsl(206deg, 97%, 15%);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -578,11 +600,87 @@ footer .footer-navbar p {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 29px;
   text-align: center;
   text-transform: uppercase;
   color: white;
+}
+
+header .m-title-row {
+  height: fit-content;
+  min-height: 30vh;
+  padding-top: 65px;
+}
+header .m-title-row .nm-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .m-title-row .nm-title-container .title-icon-container {
+  width: fit-content;
+  padding-top: 15px;
+}
+header .m-title-row .nm-title-container .title-icon-container h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 59px;
+  color: hsl(205deg, 98%, 20%);
+  text-transform: uppercase;
+}
+header .m-title-row .nm-title-container .title-icon-container .menu-title-icons {
+  display: flex;
+  justify-content: space-between;
+}
+header .m-title-row .nm-title-container .title-icon-container .menu-title-icons img {
+  height: 25px;
+}
+header .m-indice-row {
+  height: fit-content;
+  min-height: 70vh;
+  margin: 0 10px 20px 10px;
+  background-color: hsl(0deg, 0%, 85%);
+}
+header .m-indice-row .nm-indice-container h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 59px;
+  text-transform: uppercase;
+  color: hsl(205deg, 98%, 20%);
+}
+header .m-indice-row .indice-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .m-indice-row .indice-col h5 {
+  text-transform: uppercase;
+}
+header .m-indice-row .indice-col ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+header .m-indice-row .indice-col ul li {
+  text-align: center;
+}
+header .m-indice-row .indice-col ul li a {
+  text-decoration: none;
+  color: hsl(206deg, 97%, 15%);
+  text-decoration: underline;
+}
+
+.hr {
+  height: 3px;
+  background-color: hsl(206deg, 97%, 15%);
+}
+
+#hr-up {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

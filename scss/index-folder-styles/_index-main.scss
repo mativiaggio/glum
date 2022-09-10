@@ -80,7 +80,7 @@
 }
 
 @mixin contactanos-bg-filter{
-    height: 80vh;
+    height: 100vh;
     background-color: rgba(116, 116, 116, 0.452);
     backdrop-filter: blur(4px);
     @media screen and (max-width: 64em){
