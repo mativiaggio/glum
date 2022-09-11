@@ -643,7 +643,7 @@ footer .footer-navbar p {
 }
 
 .m-index-row {
-  margin: 0 10px 0 10px !important;
+  margin: 0 10px 25px 10px !important;
   height: fit-content;
   background-color: hsl(0deg, 0%, 85%);
 }
@@ -685,9 +685,6 @@ footer .footer-navbar p {
 }
 .mi-row .mi-img-container img {
   height: 100%;
-}
-.mi-row .mi-title-container {
-  margin-top: 50px;
 }
 .mi-row .mi-title-container .mi-title {
   background-color: hsl(0deg, 0%, 85%);
@@ -756,6 +753,69 @@ footer .footer-navbar p {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   text-decoration: underline;
+}
+
+.cart-header {
+  padding-top: 65px;
+  height: fit-content;
+  min-height: 10vh;
+}
+.cart-header .cart-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  height: fit-content;
+}
+.cart-header .cart-title-container h1 {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cart-header .cart-title-container .hr {
+  height: 3px;
+  background-color: hsl(206deg, 97%, 15%);
+}
+
+.cart-products-title {
+  margin-top: 25px;
+}
+.cart-products-title h3 {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 700;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.cart-container {
+  margin: 25px 10px 10px 10px;
+}
+.cart-container .cart-row {
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-container .cart-row .cart-img img {
+  height: 75px;
+  border-radius: 5px;
+}
+.cart-container .cart-row .cart-name, .cart-container .cart-row .cart-price, .cart-container .cart-row .cart-quant {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 600;
+}
+.cart-container .cart-row .cart-delete a {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 600;
+}
+.cart-container .cart-row .cart-hr {
+  margin-top: 5px;
+  height: 0.1px;
+  background-color: rgb(151, 151, 151);
 }
 
 /*# sourceMappingURL=style.css.map */

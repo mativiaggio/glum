@@ -1,0 +1,24 @@
+@use '../global/' as *;
+
+@mixin cart-header {
+    padding-top: 65px;
+    height: fit-content;
+    min-height: 10vh;
+    .cart-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 25px;
+      height: fit-content;
+      h1 {
+        font-family: $ff-body;
+        color: $clr-main-dark;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .hr {
+        height: 3px;
+        background-color: $clr-main-dark;
+      }
+    }
+}
