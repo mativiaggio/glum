@@ -1,0 +1,104 @@
+<div class="col-lg-6 col-md-12 gx-0 mi-img-container">
+    <img src="../assets/menu/1entradas/entradaFria.jpg" alt="entrada fria">
+</div>
+<div class="col-lg-6 col-md-12 gx-0 mi-desc-container">
+    <div class="mi-desc">
+        <div class="text-center mi-desc-title">
+            <h4>
+                ensalada fria
+            </h4>
+        </div>
+        <div class="text-center mi-desc-p">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.
+            </p>
+        </div>
+        <div class="mi-desc-details">
+            <div class="container-fluid">
+                <div class="row details-row">
+                    <div class="col-lg-6 col-md-12 details-items">
+                        <div class="detail-calific">
+                            <h5>Calificacion:</h5>
+                            <div class="detail-calific-img">
+                                <img src="../assets/icons/menu/fire.png" alt="fire">
+                                <img src="../assets/icons/menu/fire.png" alt="fire">
+                                <img src="../assets/icons/menu/fire.png" alt="fire">
+                                <img src="../assets/icons/menu/fire.png" alt="fire">
+                            </div>       
+                        </div>
+                        <h5>Precio: $ $ $ $</h5>
+                        <h5>Opcion vegetariana: SI</h5>
+                        <a href="#" class="btn aa-carrito-btn">Añadir al carrito</a>
+                    </div>
+                    <div class="col-lg-6 col-md-12 details-ing-container">
+                        <h6 class="text-center">lista completa de ingredientes</h6>
+                        <ul>
+                            <li>Ingrediente #1</li>
+                            <li>Ingrediente #2</li>
+                            <li>Ingrediente #3</li>
+                            <li>Ingrediente #4</li>
+                        </ul>
+                        <p>
+                            Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+`
+        <div class="col-lg-6 col-md-12 gx-0 mi-img-container">
+        <img src="${entrada.img}" alt="${entrada.nombre}">
+        </div>
+        <div class="col-lg-6 col-md-12 gx-0 mi-desc-container">
+            <div class="mi-desc">
+                <div class="text-center mi-desc-title">
+                    <h4>
+                        ${entrada.nombre}
+                    </h4>
+                </div>
+                <div class="text-center mi-desc-p">
+                    <p>
+                        ${entrada.descripcion}
+                    </p>
+                </div>
+                <div class="mi-desc-details">
+                    <div class="container-fluid">
+                        <div class="row details-row">
+                            <div class="col-lg-6 col-md-12 details-items">
+                                <div class="detail-calific">
+                                    <h5>Calificacion:</h5>
+                                    <div class="detail-calific-img">
+                                        ${entrada.fire}
+                                        ${entrada.fire}
+                                        ${entrada.fire}
+                                        ${entrada.fire}
+                                    </div>       
+                                </div>
+                                <h5>Precio: ${entrada.precio}</h5>
+                                <h5>Opcion vegetariana: ${entrada.oveg}</h5>
+                                <a href="#" class="btn aa-carrito-btn">Añadir al carrito</a>
+                            </div>
+                            <div class="col-lg-6 col-md-12 details-ing-container">
+                                <h6 class="text-center">lista completa de ingredientes</h6>
+                                <ul>
+                                    <li>Ingrediente #1</li>
+                                    <li>Ingrediente #2</li>
+                                    <li>Ingrediente #3</li>
+                                    <li>Ingrediente #4</li>
+                                </ul>
+                                <p>
+                                    ${entrada.condimentos}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `

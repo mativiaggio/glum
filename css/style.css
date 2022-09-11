@@ -9,7 +9,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: red solid 1px;
 }
 
 /*The following line prevents the navbar to obscure the elements.*/
@@ -612,21 +611,21 @@ footer .footer-navbar p {
   color: white;
 }
 
-header .m-title-row {
+.m-title-row {
   height: fit-content;
-  min-height: 30vh;
+  min-height: 40vh;
   padding-top: 65px;
 }
-header .m-title-row .nm-title-container {
+.m-title-row .nm-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header .m-title-row .nm-title-container .title-icon-container {
+.m-title-row .nm-title-container .title-icon-container {
   width: fit-content;
   padding-top: 15px;
 }
-header .m-title-row .nm-title-container .title-icon-container h1 {
+.m-title-row .nm-title-container .title-icon-container h1 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 800;
@@ -635,82 +634,128 @@ header .m-title-row .nm-title-container .title-icon-container h1 {
   color: hsl(205deg, 98%, 20%);
   text-transform: uppercase;
 }
-header .m-title-row .nm-title-container .title-icon-container .menu-title-icons {
+.m-title-row .nm-title-container .title-icon-container .menu-title-icons {
   display: flex;
   justify-content: space-between;
 }
-header .m-title-row .nm-title-container .title-icon-container .menu-title-icons img {
+.m-title-row .nm-title-container .title-icon-container .menu-title-icons img {
   height: 25px;
 }
-header .m-indice-row {
+
+.m-index-row {
+  margin: 0 10px 0 10px !important;
   height: fit-content;
-  min-height: 70vh;
-  margin: 0 10px 20px 10px;
   background-color: hsl(0deg, 0%, 85%);
 }
-header .m-indice-row .nm-indice-container h1 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 59px;
+.m-index-row .mi-title-container h1 {
   text-transform: uppercase;
-  color: hsl(205deg, 98%, 20%);
-}
-header .m-indice-row .indice-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header .m-indice-row .indice-col h5 {
-  text-transform: uppercase;
-}
-header .m-indice-row .indice-col ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-header .m-indice-row .indice-col ul li {
-  text-align: center;
-}
-header .m-indice-row .indice-col ul li a {
-  text-decoration: none;
   color: hsl(206deg, 97%, 15%);
-  text-decoration: underline;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
-
-.hr {
-  height: 3px;
-  background-color: hsl(206deg, 97%, 15%);
-}
-
-#hr-up {
+.m-index-row .mi-title-container #hr-up {
   margin-top: 15px;
 }
+.m-index-row .mi-title-container .hr {
+  height: 3px;
+  background-color: hsl(206deg, 97%, 15%);
+  margin: 0 5px 0 5px;
+}
+.m-index-row .indice-col {
+  margin-top: 25px;
+}
+.m-index-row .indice-col h5 {
+  color: hsl(206deg, 97%, 15%);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.m-index-row .indice-col ul {
+  list-style: none;
+  padding-left: 0;
+}
+.m-index-row .indice-col ul li a {
+  text-decoration: underline;
+  color: hsl(206deg, 97%, 15%);
+}
 
-.imenu-title-row {
+.mi-row {
   height: fit-content;
+  margin: 0 10px 0 10px !important;
 }
-.imenu-title-row .menu-section-title-container {
-  height: fit-content;
+.mi-row .mi-img-container img {
+  height: 100%;
 }
-.imenu-title-row .menu-section-title-container .menu-section-title {
+.mi-row .mi-title-container {
+  margin-top: 50px;
+}
+.mi-row .mi-title-container .mi-title {
   background-color: hsl(0deg, 0%, 85%);
   height: 100px;
-  margin: 0 10px 0 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.imenu-title-row .menu-section-title-container .menu-section-title h3 {
-  font-family: "Montserrat", sans-serif;
-  color: hsl(205deg, 98%, 20%);
+.mi-row .mi-title-container .mi-title h3 {
   text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
-
-.imenu-row .im-img-container .im-img {
-  margin: 0 0 0 10px;
+.mi-row .mi-desc-container {
+  margin-top: 15px;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-title h4 {
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-p {
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  padding: 0 15px 0 15px;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-items h5 {
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 600;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-items .detail-calific {
+  display: flex;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-items .detail-calific .detail-calific-img {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-items .detail-calific .detail-calific-img img {
+  height: 20px;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-items .aa-carrito-btn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  color: hsl(206deg, 97%, 15%);
+  border: 2px solid hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-items .aa-carrito-btn:hover {
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-ing-container {
+  background-color: hsl(0deg, 0%, 85%);
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+}
+.mi-row .mi-desc-container .mi-desc .mi-desc-details .details-ing-container h6 {
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
