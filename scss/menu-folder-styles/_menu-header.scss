@@ -3,8 +3,9 @@
 
 @mixin menu-header {
   height: fit-content;
-  min-height: 40vh;
+  min-height: 20vh;
   padding-top: 65px;
+  margin-bottom: 15px;
   .nm-title-container {
     display: flex;
     flex-direction: column;
@@ -20,12 +21,18 @@
         line-height: 59px;
         color: $clr-main-font;
         text-transform: uppercase;
+        @media screen and (max-width: 64em){
+          font-size: 34px;
+        }
       }
       .menu-title-icons {
         display: flex;
         justify-content: space-between;
         img {
           height: 25px;
+          @media screen and (max-width: 64em){
+            height: 18px;
+          }
         }
       }
     }

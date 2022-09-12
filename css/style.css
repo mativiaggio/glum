@@ -613,8 +613,9 @@ footer .footer-navbar p {
 
 .m-title-row {
   height: fit-content;
-  min-height: 40vh;
+  min-height: 20vh;
   padding-top: 65px;
+  margin-bottom: 15px;
 }
 .m-title-row .nm-title-container {
   display: flex;
@@ -634,12 +635,22 @@ footer .footer-navbar p {
   color: hsl(205deg, 98%, 20%);
   text-transform: uppercase;
 }
+@media screen and (max-width: 64em) {
+  .m-title-row .nm-title-container .title-icon-container h1 {
+    font-size: 34px;
+  }
+}
 .m-title-row .nm-title-container .title-icon-container .menu-title-icons {
   display: flex;
   justify-content: space-between;
 }
 .m-title-row .nm-title-container .title-icon-container .menu-title-icons img {
   height: 25px;
+}
+@media screen and (max-width: 64em) {
+  .m-title-row .nm-title-container .title-icon-container .menu-title-icons img {
+    height: 18px;
+  }
 }
 
 .m-index-row {
