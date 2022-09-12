@@ -12,7 +12,7 @@ let entradas = [
     fire2: '../assets/icons/menu/fire.png', 
     fire3: '../assets/icons/menu/fire.png', 
     fire4: '../assets/icons/menu/fire.png', 
-    fire5: '',  
+    fire5: '../assets/icons/menu/fire-empty.png',  
 
     precio: 4200, 
 
@@ -30,9 +30,9 @@ let entradas = [
 
     fire1: '../assets/icons/menu/fire.png',
     fire2: '../assets/icons/menu/fire.png', 
-    fire3: '', 
-    fire4: '', 
-    fire5: '',
+    fire3: '../assets/icons/menu/fire-empty.png', 
+    fire4: '../assets/icons/menu/fire-empty.png', 
+    fire5: '../assets/icons/menu/fire-empty.png',
 
     precio: 2100, 
 
@@ -56,7 +56,7 @@ let entradas = [
     fire2: '../assets/icons/menu/fire.png', 
     fire3: '../assets/icons/menu/fire.png', 
     fire4: '../assets/icons/menu/fire.png', 
-    fire5: '', 
+    fire5: '../assets/icons/menu/fire-empty.png', 
 
     precio: 3400, 
 
@@ -107,7 +107,7 @@ let ensaladas = [
         fire2: '../assets/icons/menu/fire.png', 
         fire3: '../assets/icons/menu/fire.png', 
         fire4: '../assets/icons/menu/fire.png', 
-        fire5: '',  
+        fire5: '../assets/icons/menu/fire-empty.png',  
     
         precio: 2900, 
     
@@ -126,8 +126,8 @@ let ensaladas = [
         fire1: '../assets/icons/menu/fire.png',
         fire2: '../assets/icons/menu/fire.png', 
         fire3: '../assets/icons/menu/fire.png', 
-        fire4: '', 
-        fire5: '', 
+        fire4: '../assets/icons/menu/fire-empty.png', 
+        fire5: '../assets/icons/menu/fire-empty.png', 
     
         precio: 2100, 
     
@@ -178,7 +178,7 @@ let carnes = [
     fire2: '../assets/icons/menu/fire.png', 
     fire3: '../assets/icons/menu/fire.png', 
     fire4: '../assets/icons/menu/fire.png', 
-    fire5: '', 
+    fire5: '../assets/icons/menu/fire-empty.png', 
 
     precio: 3800, 
 
@@ -202,7 +202,7 @@ let carnes = [
     fire2: '../assets/icons/menu/fire.png', 
     fire3: '../assets/icons/menu/fire.png', 
     fire4: '../assets/icons/menu/fire.png', 
-    fire5: '',  
+    fire5: '../assets/icons/menu/fire-empty.png',  
 
     precio: 4000, 
 
