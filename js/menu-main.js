@@ -1,224 +1,4 @@
-let entradas = [
-
-    {id: 0,
-        
-    nombre: 'entrada fria',
-
-    img: '../assets/menu/1entradas/entradaFria.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: 4200, 
-
-    oveg: 'SI', 
-
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',},
-
-    {id: 1,
-        
-    nombre: 'corn deluxe',
-
-    img: '../assets/menu/1entradas/cornDeluxe.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: 2100, 
-
-    oveg: 'SI', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: 'order-lg-1',
-
-    },
-
-    {id: 2,
-        
-    nombre: 'rabas',
-
-    img: '../assets/menu/1entradas/rabas.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: 3400, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: '',
-
-    },
-
-    {id: 3,
-        
-    nombre: 'tabla de quesos',
-
-    img: '../assets/menu/1entradas/tablaDeQuesos.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: 3600, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-    
-    orientacion: 'order-lg-1',
-
-    },
-
-]
-
-let ensaladas = [
-    {id: 0,
-        
-        nombre: 'premium salad',
-    
-        img: '../assets/menu/2ensaladas/ensaladaPremium.jpg',
-    
-        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-    
-        fire: '../assets/icons/menu/fire.jpg', 
-    
-        precio: 2900, 
-    
-        oveg: 'SI', 
-    
-        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',},
-    
-        {id: 1,
-            
-        nombre: 'fresh salad',
-    
-        img: '../assets/menu/2ensaladas/freshSalad.jpg',
-    
-        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-    
-        fire: '../assets/icons/menu/fire.jpg', 
-    
-        precio: 2100, 
-    
-        oveg: 'SI', 
-        
-        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-        orientacion: 'order-lg-1',
-    
-        },
-]
-
-let carnes = [
-    
-    {id: 0,
-        
-        nombre: 'tomahawk',
-        
-        img: '../assets/menu/3platosPrincipales/carnesRojas/tomaHawk.jpg',
-        
-        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-        
-        fire: '../assets/icons/menu/fire.jpg', 
-        
-        precio: ' $ $ $ $', 
-        
-        oveg: 'NO', 
-        
-        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-        
-        orientacion: '',
-        
-    },
-    
-    {id: 1,
-        
-    nombre: 'costillar de cerdo',
-
-    img: '../assets/menu/3platosPrincipales/carnesRojas/pechitoDeCerdo.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: ' $ $ $ $', 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-    
-    orientacion: 'order-lg-1',
-
-    },
-
-    {id: 2,
-        
-    nombre: 'entraña con papas',
-
-    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConPapas.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: ' $ $ $ $ $ ', 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: '',
-    
-    },
-
-    {id: 3,
-        
-    nombre: 'pechito de cerdo',
-
-    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConEsparragos.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: ' $ $ $ ', 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: 'order-lg-1',
-
-    },
-
-    {id: 4,
-        
-    nombre: 'brochetas de carne',
-
-    img: '../assets/menu/3platosPrincipales/carnesRojas/brochetasDeCarne.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire: '../assets/icons/menu/fire.jpg', 
-
-    precio: ' $ $ $ $ ', 
-
-    oveg: 'NO', 
-
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
-    
-    },
-]
-
+import { entradas, ensaladas, carnes } from "./objects/menu-objects.js";
 
 /* 
 
@@ -253,7 +33,11 @@ const buildEntradas = () => {
                                 <div class="detail-calific">
                                     <h5>Calificacion:</h5>
                                     <div class="detail-calific-img">
-                                        
+                                        <img src="${entrada.fire1}">
+                                        <img src="${entrada.fire2}">
+                                        <img src="${entrada.fire3}">
+                                        <img src="${entrada.fire4}">
+                                        <img src="${entrada.fire5}">
                                     </div>       
                                 </div>
                                 <h5>Precio: $${entrada.precio}</h5>
@@ -284,7 +68,7 @@ const buildEntradas = () => {
 };
 
 // CARRITO CHECKER
-const addEntradaToCart = (entradaIndex) => {
+window.addEntradaToCart = (entradaIndex) => {
     
     const indexFinder = cartEntrada.findIndex((item) => {
         return item.id === entradas[entradaIndex].id;
@@ -359,7 +143,7 @@ const buildEntradasCart = () => {
         })
     }
 };
-const removeEntrada = (entradaIndex) => {
+window.removeEntrada = (entradaIndex) => {
     cartEntrada.splice(entradaIndex,1);
     const Toast = Swal.mixin({
         toast: true,
@@ -413,8 +197,12 @@ const buildEnsaladas = () => {
                             <div class="col-lg-6 col-md-12 details-items">
                                 <div class="detail-calific">
                                     <h5>Calificacion:</h5>
-                                    <div class="detail-calific-img">
-                                        
+                                        <div class="detail-calific-img">
+                                        <img src="${ensalada.fire1}">
+                                        <img src="${ensalada.fire2}">
+                                        <img src="${ensalada.fire3}">
+                                        <img src="${ensalada.fire4}">
+                                        <img src="${ensalada.fire5}">
                                     </div>       
                                 </div>
                                 <h5>Precio: $${ensalada.precio}</h5>
@@ -446,7 +234,7 @@ const buildEnsaladas = () => {
 
 // CARRITO CHECKER
 
-const addEnsaladaToCart = (ensaladaIndex) => {
+window.addEnsaladaToCart = (ensaladaIndex) => {
     
     const indexFinder = cartEnsalada.findIndex((item) => {
         return item.id === ensaladas[ensaladaIndex].id;
@@ -521,7 +309,7 @@ const buildEnsaladasCart = () => {
         })
     }
 };
-const removeEnsalada = (ensaladaIndex) => {
+window.removeEnsalada = (ensaladaIndex) => {
     cartEnsalada.splice(ensaladaIndex,1);
     const Toast = Swal.mixin({
         toast: true,
@@ -539,7 +327,7 @@ const removeEnsalada = (ensaladaIndex) => {
         icon: 'warning',
         title: `Producto eliminado!`
       })
-    buildEntradasCart();
+    buildEnsaladasCart();
 }
 /* 
 
@@ -574,7 +362,11 @@ const buildCarnes = () => {
                                 <div class="detail-calific">
                                     <h5>Calificacion:</h5>
                                     <div class="detail-calific-img">
-                                        
+                                        <img src="${carne.fire1}">
+                                        <img src="${carne.fire2}">
+                                        <img src="${carne.fire3}">
+                                        <img src="${carne.fire4}">
+                                        <img src="${carne.fire5}">
                                     </div>       
                                 </div>
                                 <h5>Precio: ${carne.precio}</h5>
@@ -606,7 +398,7 @@ const buildCarnes = () => {
 
 // CARRITO CHECKER
 
-const addCarneToCart = (carneIndex) => {
+window.addCarneToCart = (carneIndex) => {
     
     const indexFinder = cartCarne.findIndex((item) => {
         return item.id === carnes[carneIndex].id;
@@ -681,7 +473,7 @@ const buildCarnesCart = () => {
         })
     }
 };
-const removeCarne = (carneIndex) => {
+window.removeCarne = (carneIndex) => {
     cartCarne.splice(carneIndex,1);
     const Toast = Swal.mixin({
         toast: true,
@@ -699,7 +491,7 @@ const removeCarne = (carneIndex) => {
         icon: 'warning',
         title: `Producto eliminado!`
       })
-    buildEntradasCart();
+    buildCarnesCart();
 }
 buildCarnes();
 buildEntradas();
