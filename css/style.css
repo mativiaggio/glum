@@ -789,6 +789,14 @@ footer .footer-navbar p {
   text-transform: uppercase;
 }
 
+.cart-table div p {
+  text-align: start;
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
 .cart-container {
   margin: 25px 10px 10px 10px;
 }
@@ -797,20 +805,43 @@ footer .footer-navbar p {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15px;
 }
 .cart-container .cart-row .cart-img img {
   height: 75px;
+  width: 110px;
   border-radius: 5px;
 }
-.cart-container .cart-row .cart-name, .cart-container .cart-row .cart-price, .cart-container .cart-row .cart-quant {
+.cart-container .cart-row .cart-name {
   font-family: "Montserrat", sans-serif;
   color: hsl(206deg, 97%, 15%);
   font-weight: 600;
+  text-transform: uppercase;
+  text-align: start;
 }
-.cart-container .cart-row .cart-delete a {
+.cart-container .cart-row .cart-price, .cart-container .cart-row .cart-quant {
   font-family: "Montserrat", sans-serif;
   color: hsl(206deg, 97%, 15%);
   font-weight: 600;
+  text-transform: uppercase;
+  text-align: start;
+}
+.cart-container .cart-row .cart-delete {
+  display: flex;
+  justify-content: center;
+}
+.cart-container .cart-row .cart-delete .cart-delete-btn {
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 2px solid hsl(206deg, 97%, 15%);
+}
+.cart-container .cart-row .cart-delete .cart-delete-btn:hover {
+  background-color: white;
+  color: hsl(206deg, 97%, 15%);
+  border: 2px solid hsl(206deg, 97%, 15%);
 }
 .cart-container .cart-row .cart-hr {
   margin-top: 5px;
