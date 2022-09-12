@@ -746,6 +746,7 @@ footer .footer-navbar p {
   background-color: hsl(0deg, 0%, 85%);
   color: hsl(206deg, 97%, 15%);
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 25px;
 }
 .mi-row .mi-desc-container .mi-desc .mi-desc-details .details-ing-container h6 {
   text-transform: uppercase;
@@ -778,6 +779,28 @@ footer .footer-navbar p {
   background-color: hsl(206deg, 97%, 15%);
 }
 
+.cpt-md-container {
+  margin-top: 25px;
+  visibility: hidden;
+  height: 0px;
+}
+@media screen and (max-width: 64em) {
+  .cpt-md-container {
+    margin-top: 25px;
+    display: contents;
+    visibility: visible;
+    height: fit-content;
+  }
+}
+.cpt-md-container .cart-products-title-md h3 {
+  margin-top: 25px;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 700;
+  font-size: large;
+  text-transform: uppercase;
+}
+
 .cart-products-title {
   margin-top: 25px;
 }
@@ -796,6 +819,13 @@ footer .footer-navbar p {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
+@media screen and (max-width: 64em) {
+  .cart-table {
+    display: none;
+    visibility: hidden;
+    height: 0px;
+  }
+}
 
 .cart-container {
   margin: 25px 10px 10px 10px;
@@ -806,6 +836,11 @@ footer .footer-navbar p {
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
+}
+@media screen and (max-width: 64em) {
+  .cart-container .cart-row {
+    height: fit-content;
+  }
 }
 .cart-container .cart-row .cart-img img {
   height: 75px;
@@ -819,6 +854,11 @@ footer .footer-navbar p {
   text-transform: uppercase;
   text-align: start;
 }
+@media screen and (max-width: 64em) {
+  .cart-container .cart-row .cart-name {
+    margin-top: 15px;
+  }
+}
 .cart-container .cart-row .cart-price, .cart-container .cart-row .cart-quant {
   font-family: "Montserrat", sans-serif;
   color: hsl(206deg, 97%, 15%);
@@ -829,6 +869,12 @@ footer .footer-navbar p {
 .cart-container .cart-row .cart-delete {
   display: flex;
   justify-content: center;
+}
+@media screen and (max-width: 64em) {
+  .cart-container .cart-row .cart-delete {
+    margin-top: 15px;
+    justify-content: flex-start;
+  }
 }
 .cart-container .cart-row .cart-delete .cart-delete-btn {
   background-color: hsl(206deg, 97%, 15%);

@@ -458,16 +458,16 @@ const buildCarnesCart = () => {
         cartCarne.forEach ((carne, carneIndex) => {
             total = total + carne.precio * carne.quant;
             const carritoContainer = document.createElement('div');
-            carritoContainer.className = 'cart-row';
+            carritoContainer.classList.add('cart-row', 'row');
             carritoContainer.innerHTML = `
-                <div class="col-2 cart-img">
+                <div class="col-lg-2 col-md-6 cart-img">
                 <img src="${carne.img}" alt="${carne.nombre}">
                 </div>
-                <div class="col-2 cart-name"><p>${carne.nombre}</p></div>
-                <div class="col-2 cart-price"><p>$${carne.precio}</p></div>
-                <div class="col-2 cart-quant"><p>(${carne.quant})</p></div>
-                <div class="col-2 cart-price">$${carne.precio * carne.quant}</div>
-                <div class="col-2 cart-delete"><button class="btn cart-delete-btn" onClick="removeCarne(${carneIndex})">eliminar</button></div>
+                <div class="col-lg-2 col-md-6 cart-name"><p>${carne.nombre}</p></div>
+                <div class="col-lg-2 col-md-6 cart-price"><p>$${carne.precio}</p></div>
+                <div class="col-lg-2 col-md-6 cart-quant"><p>(${carne.quant})</p></div>
+                <div class="col-lg-2 col-md-12 cart-price">$${carne.precio * carne.quant}</div>
+                <div class="col-lg-2 col-md-12 cart-delete"><button class="btn cart-delete-btn" onClick="removeCarne(${carneIndex})">eliminar</button></div>
             `;
             modalCarritoCarne.appendChild(carritoContainer);
         })

@@ -206,7 +206,28 @@ footer {
 .cart-header {
   @include cart-header
 }
+.cpt-md-container {
+  margin-top: 25px;
+  visibility: hidden;
+  height: 0px;
+  @media screen and (max-width: 64em){
+    margin-top: 25px;
+    display: contents;
+    visibility: visible;
+    height: fit-content;
+  }
+  .cart-products-title-md {
+    h3 {
+      margin-top: 25px;
+      font-family: $ff-body;
+      color: $clr-main-dark;
+      font-weight: 700;
+      font-size: large;
+      text-transform: uppercase;
+    }
+  }
 
+}
 .cart-products-title{
   margin-top: 25px;
   h3 {
@@ -227,6 +248,11 @@ footer {
       font-weight: 600;
     }   
   }
+  @media screen and (max-width: 64em) {
+    display: none;
+    visibility: hidden;
+    height: 0px;
+  }
 }
 .cart-container {
   margin: 25px 10px 10px 10px;
@@ -236,6 +262,9 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
+    @media screen and (max-width: 64em) {
+      height: fit-content;
+    }
     .cart-img {
       img {
         height: 75px;
@@ -249,6 +278,9 @@ footer {
       font-weight: 600;
       text-transform: uppercase;
       text-align: start;
+      @media screen and (max-width: 64em) {
+        margin-top: 15px;
+      }
     } 
     .cart-price, .cart-quant {
       font-family: $ff-body;
@@ -260,6 +292,10 @@ footer {
     .cart-delete {
       display: flex;
       justify-content: center;
+      @media screen and (max-width: 64em) {
+        margin-top: 15px;
+        justify-content: flex-start;
+      }
       .cart-delete-btn {
         background-color: $clr-main-dark;
         color: white;
