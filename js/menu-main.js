@@ -1,73 +1,13 @@
 import { entradas, ensaladas, carnes } from "./objects/menu-objects.js";
-
+import { buildEntradas} from "./constructores/entradas.js";
+import { buildEnsaladas} from "./constructores/ensaladas.js";
+import { buildCarnes} from "./constructores/carnes.js";
 /* 
 
 ENTRADAS
 
 */
-const buildEntradas = () => {
-    let contenedor = document.getElementById("container-entradas");
-    entradas.forEach((entrada, entradaIndex) => {
-        let section = document.createElement("div");
-        section.classList.add("row", "mi-row");
-        section.innerHTML = `
-        <div class="col-lg-7 ${entrada.orientacion} col-md-12 gx-0 mi-img-container">
-        <img loading="lazy" src="${entrada.img}" alt="${entrada.nombre}">
-        </div>
-        <div class="col-lg-5 col-md-12 gx-0 mi-desc-container">
-            <div class="mi-desc">
-                <div class="text-center mi-desc-title">
-                    <h4>
-                        ${entrada.nombre}
-                    </h4>
-                </div>
-                <div class="text-center mi-desc-p">
-                    <p>
-                        ${entrada.descripcion}
-                    </p>
-                </div>
-                <div class="mi-desc-details">
-                    <div class="container-fluid">
-                        <div class="row details-row">
-                            <div class="col-lg-6 col-md-12 details-items">
-                                <div class="detail-calific">
-                                    <h5>Calificacion:</h5>
-                                    <div class="detail-calific-img">
-                                        <img src="${entrada.fire1}">
-                                        <img src="${entrada.fire2}">
-                                        <img src="${entrada.fire3}">
-                                        <img src="${entrada.fire4}">
-                                        <img src="${entrada.fire5}">
-                                    </div>       
-                                </div>
-                                <h5>Precio: $${entrada.precio}</h5>
-                                <h5>Opcion vegetariana: ${entrada.oveg}</h5>
-                                <button class='btn aa-carrito-btn' onClick="addEntradaToCart(${entradaIndex})">Añadir al carrito</button><br>
-                                <a href="#indice">Ir al indice</a>
-                            </div>
-                            <div class="col-lg-6 col-md-12 details-ing-container">
-                                <h6 class="text-center">lista completa de ingredientes</h6>
-                                <ul>
-                                    <li>Ingrediente #1</li>
-                                    <li>Ingrediente #2</li>
-                                    <li>Ingrediente #3</li>
-                                    <li>Ingrediente #4</li>
-                                </ul>
-                                <p>
-                                    ${entrada.condimentos}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `;
-        contenedor.appendChild(section)
-    })
-};
-
-// CARRITO CHECKER
+// CARRITO CHECKER DE ENTRADA
 window.addEntradaToCart = (entradaIndex) => {
     
     const indexFinder = cartEntrada.findIndex((item) => {
@@ -120,7 +60,7 @@ window.addEntradaToCart = (entradaIndex) => {
     }
 };
 
-// CONTRUCTOR DE CARRITO
+// CONTRUCTOR DE CARRITO DE ENTRADA
 
 const buildEntradasCart = () => {
     modalCarritoEntrada.innerHTML = '';
@@ -163,76 +103,12 @@ window.removeEntrada = (entradaIndex) => {
       })
     buildEntradasCart();
 }
-
 /* 
 
 ENSALADAS ↓ ↓ ↓
 
 */
-
-const buildEnsaladas = () => {
-    let contenedor = document.getElementById("container-ensaladas");
-    ensaladas.forEach((ensalada, ensaladaIndex) => {
-        let section = document.createElement("div");
-        section.classList.add("row", "mi-row");
-        section.innerHTML = `
-        <div class="col-lg-7 ${ensalada.orientacion} col-md-12 gx-0 mi-img-container">
-        <img loading="lazy" src="${ensalada.img}" alt="${ensalada.nombre}">
-        </div>
-        <div class="col-lg-5 col-md-12 gx-0 mi-desc-container">
-            <div class="mi-desc">
-                <div class="text-center mi-desc-title">
-                    <h4>
-                        ${ensalada.nombre}
-                    </h4>
-                </div>
-                <div class="text-center mi-desc-p">
-                    <p>
-                        ${ensalada.descripcion}
-                    </p>
-                </div>
-                <div class="mi-desc-details">
-                    <div class="container-fluid">
-                        <div class="row details-row">
-                            <div class="col-lg-6 col-md-12 details-items">
-                                <div class="detail-calific">
-                                    <h5>Calificacion:</h5>
-                                        <div class="detail-calific-img">
-                                        <img src="${ensalada.fire1}">
-                                        <img src="${ensalada.fire2}">
-                                        <img src="${ensalada.fire3}">
-                                        <img src="${ensalada.fire4}">
-                                        <img src="${ensalada.fire5}">
-                                    </div>       
-                                </div>
-                                <h5>Precio: $${ensalada.precio}</h5>
-                                <h5>Opcion vegetariana: ${ensalada.oveg}</h5>
-                                <button class='btn aa-carrito-btn' onClick="addEnsaladaToCart(${ensaladaIndex})">Añadir al carrito</button><br>
-                                <a href="#indice">Ir al indice</a>
-                            </div>
-                            <div class="col-lg-6 col-md-12 details-ing-container">
-                                <h6 class="text-center">lista completa de ingredientes</h6>
-                                <ul>
-                                    <li>Ingrediente #1</li>
-                                    <li>Ingrediente #2</li>
-                                    <li>Ingrediente #3</li>
-                                    <li>Ingrediente #4</li>
-                                </ul>
-                                <p>
-                                    ${ensalada.condimentos}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `;
-        contenedor.appendChild(section)
-    })
-};
-
-// CARRITO CHECKER
+// CARRITO CHECKER DE ENSALADAS
 
 window.addEnsaladaToCart = (ensaladaIndex) => {
     
@@ -286,7 +162,7 @@ window.addEnsaladaToCart = (ensaladaIndex) => {
     }
 };
 
-// CONTRUCTOR DE CARRITO
+// CONTRUCTOR DE CARRITO DE ENSALADAS
 
 const buildEnsaladasCart = () => {
     modalCarritoEnsalada.innerHTML = '';
@@ -334,69 +210,9 @@ window.removeEnsalada = (ensaladaIndex) => {
 CARNES
 
 */
-const buildCarnes = () => {
-    let contenedor = document.getElementById("container-carnes");
-    carnes.forEach((carne, carneIndex) => {
-        let section = document.createElement("div");
-        section.classList.add("row", "mi-row");
-        section.innerHTML = `
-        <div class="col-lg-7 ${carne.orientacion} col-md-12 gx-0 mi-img-container">
-        <img loading="lazy" src="${carne.img}" alt="${carne.nombre}">
-        </div>
-        <div class="col-lg-5 col-md-12 gx-0 mi-desc-container">
-            <div class="mi-desc">
-                <div class="text-center mi-desc-title">
-                    <h4>
-                        ${carne.nombre}
-                    </h4>
-                </div>
-                <div class="text-center mi-desc-p">
-                    <p>
-                        ${carne.descripcion}
-                    </p>
-                </div>
-                <div class="mi-desc-details">
-                    <div class="container-fluid">
-                        <div class="row details-row">
-                            <div class="col-lg-6 col-md-12 details-items">
-                                <div class="detail-calific">
-                                    <h5>Calificacion:</h5>
-                                    <div class="detail-calific-img">
-                                        <img src="${carne.fire1}">
-                                        <img src="${carne.fire2}">
-                                        <img src="${carne.fire3}">
-                                        <img src="${carne.fire4}">
-                                        <img src="${carne.fire5}">
-                                    </div>       
-                                </div>
-                                <h5>Precio: ${carne.precio}</h5>
-                                <h5>Opcion vegetariana: ${carne.oveg}</h5>
-                                <button class='btn aa-carrito-btn' onClick="addCarneToCart(${carneIndex})">Añadir al carrito</button><br>
-                                <a href="#indice">Ir al indice</a>
-                            </div>
-                            <div class="col-lg-6 col-md-12 details-ing-container">
-                                <h6 class="text-center">lista completa de ingredientes</h6>
-                                <ul>
-                                    <li>Ingrediente #1</li>
-                                    <li>Ingrediente #2</li>
-                                    <li>Ingrediente #3</li>
-                                    <li>Ingrediente #4</li>
-                                </ul>
-                                <p>
-                                    ${carne.condimentos}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        `;
-        contenedor.appendChild(section)
-    })
-};
 
-// CARRITO CHECKER
+
+// CARRITO CHECKER DE CARNES
 
 window.addCarneToCart = (carneIndex) => {
     
@@ -450,7 +266,7 @@ window.addCarneToCart = (carneIndex) => {
     }
 };
 
-// CONTRUCTOR DE CARRITO
+// CONTRUCTOR DE CARRITO DE CARNES
 
 const buildCarnesCart = () => {
     modalCarritoCarne.innerHTML = '';
@@ -493,9 +309,9 @@ window.removeCarne = (carneIndex) => {
       })
     buildCarnesCart();
 }
-buildCarnes();
 buildEntradas();
 buildEnsaladas();
+buildCarnes();
 
 
 // CARRITO INICIAL
@@ -509,9 +325,8 @@ let cartCarne = [];
 let total = 0;
 
 // MODAL CARRITO
-
-let modalCarritoEntrada = document.getElementById('cart-container-entrada');
-let modalCarritoEnsalada = document.getElementById('cart-container-ensalada');
-let modalCarritoCarne = document.getElementById('cart-container-carne');
+let modalCarritoEntrada = document.querySelector('#cart-container-entrada');
+let modalCarritoEnsalada = document.querySelector('#cart-container-ensalada');
+let modalCarritoCarne = document.querySelector('#cart-container-carne');
 
 

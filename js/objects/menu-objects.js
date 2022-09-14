@@ -4,7 +4,7 @@ let entradas = [
         
     nombre: 'entrada fria',
 
-    img: '../assets/menu/1entradas/entradaFria.jpg',
+    img: '../assets/menu/1entradas/entradaFria-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -24,7 +24,7 @@ let entradas = [
         
     nombre: 'corn deluxe',
 
-    img: '../assets/menu/1entradas/cornDeluxe.jpg',
+    img: '../assets/menu/1entradas/cornDeluxe-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -48,7 +48,7 @@ let entradas = [
         
     nombre: 'rabas',
 
-    img: '../assets/menu/1entradas/rabas.jpg',
+    img: '../assets/menu/1entradas/rabas-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -72,7 +72,7 @@ let entradas = [
         
     nombre: 'tabla de quesos',
 
-    img: '../assets/menu/1entradas/tablaDeQuesos.jpg',
+    img: '../assets/menu/1entradas/tablaDeQuesos-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -99,7 +99,7 @@ let ensaladas = [
         
         nombre: 'premium salad',
     
-        img: '../assets/menu/2ensaladas/ensaladaPremium.jpg',
+        img: '../assets/menu/2ensaladas/ensaladaPremium-min.jpg',
     
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
     
@@ -119,7 +119,7 @@ let ensaladas = [
             
         nombre: 'fresh salad',
     
-        img: '../assets/menu/2ensaladas/freshSalad.jpg',
+        img: '../assets/menu/2ensaladas/freshSalad-min.jpg',
     
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
     
@@ -146,7 +146,7 @@ let carnes = [
         
         nombre: 'tomahawk',
         
-        img: '../assets/menu/3platosPrincipales/carnesRojas/tomaHawk.jpg',
+        img: '../assets/menu/3platosPrincipales/carnesRojas/tomaHawk-min.jpg',
         
         descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
         
@@ -170,7 +170,7 @@ let carnes = [
         
     nombre: 'costillar de cerdo',
 
-    img: '../assets/menu/3platosPrincipales/carnesRojas/pechitoDeCerdo.jpg',
+    img: '../assets/menu/3platosPrincipales/carnesRojas/pechitoDeCerdo-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -194,7 +194,7 @@ let carnes = [
         
     nombre: 'entraña con papas',
 
-    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConPapas.jpg',
+    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConPapas-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -218,7 +218,7 @@ let carnes = [
         
     nombre: 'pechito de cerdo',
 
-    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConEsparragos.jpg',
+    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConEsparragos-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
@@ -242,7 +242,7 @@ let carnes = [
         
     nombre: 'brochetas de carne',
 
-    img: '../assets/menu/3platosPrincipales/carnesRojas/brochetasDeCarne.jpg',
+    img: '../assets/menu/3platosPrincipales/carnesRojas/brochetasDeCarne-min.jpg',
 
     descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
 
