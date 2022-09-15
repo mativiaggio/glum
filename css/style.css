@@ -161,7 +161,7 @@ nav #navbarSupportedContent {
   font-family: "Montserrat", sans-serif !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  font-size: 18px !important;
+  font-size: 15px !important;
   text-transform: uppercase !important;
   border: 2px solid rgba(255, 255, 255, 0) !important;
   margin-left: 20px !important;
@@ -190,7 +190,7 @@ nav #navbarSupportedContent {
 .navbar-nav .nav-item .btn-delivery {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 800 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   text-transform: uppercase !important;
   border: 2px solid white !important;
   border-radius: 50px !important;
@@ -215,7 +215,7 @@ nav #navbarSupportedContent {
 .navbar-nav .nav-item .btn-reserva {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 800 !important;
-  font-size: 18px !important;
+  font-size: 16px !important;
   text-transform: uppercase !important;
   border: 2px solid white !important;
   border-radius: 50px !important;
@@ -233,6 +233,10 @@ nav #navbarSupportedContent {
     margin-left: 0 !important;
     margin-top: 20px !important;
   }
+}
+.navbar-nav .shopping-bag img {
+  height: 30px;
+  width: 30px;
 }
 
 .index-header {
@@ -810,9 +814,6 @@ footer .footer-navbar p {
   font-size: large;
   text-transform: uppercase;
 }
-.cart-main-container .cart-products-title {
-  margin-top: 25px;
-}
 .cart-main-container .cart-products-title h3 {
   font-family: "Montserrat", sans-serif;
   color: hsl(206deg, 97%, 15%);
@@ -918,6 +919,93 @@ footer .footer-navbar p {
   font-weight: 600;
   text-transform: uppercase;
   text-align: start;
+}
+
+.cart-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 15px 0;
+}
+.cart-grid img {
+  height: 250px;
+  object-fit: cover;
+}
+.cart-grid .card-body .mi-desc-title {
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.cart-grid .card-body .detail-calific {
+  display: flex;
+  justify-content: center;
+}
+.cart-grid .card-body .detail-calific h5 {
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.cart-grid .card-body .detail-calific .detail-calific-img {
+  display: flex;
+}
+.cart-grid .card-body .detail-calific .detail-calific-img img {
+  height: 20px;
+}
+.cart-grid .card-body .details-pds {
+  text-transform: uppercase;
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.cart-grid .card-body .aa-carrito-btn {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  color: hsl(206deg, 97%, 15%);
+  border: 2px solid hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.cart-grid .card-body .aa-carrito-btn:hover {
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+}
+.cart-grid .card-body .btn-vermas {
+  margin-bottom: 15px;
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+  border: 2px solid hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.cart-grid .card-body .btn-vermas:hover {
+  background-color: white;
+  color: hsl(206deg, 97%, 15%);
+}
+
+.lista-de-ingredientes-title {
+  color: hsl(206deg, 97%, 15%);
+}
+
+.vermas-alert-content * {
+  color: hsl(206deg, 97%, 15%);
+}
+
+.alert-carrito-btn {
+  background-color: white !important;
+  color: hsl(206deg, 97%, 15%) !important;
+  border: 2px solid hsl(206deg, 97%, 15%) !important;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+}
+.alert-carrito-btn:hover {
+  background-color: hsl(206deg, 97%, 15%) !important;
+  color: white !important;
 }
 
 /*# sourceMappingURL=style.css.map */

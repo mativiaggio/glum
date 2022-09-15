@@ -6,70 +6,62 @@ const buildProductos = () => {
     let contenedor = document.getElementById("container-productos");
     productos.forEach((producto, productoIndex) => {
         let section = document.createElement("div");
-        section.classList.add("row", "mi-row");
+        section.classList.add("col-xl-3", "col-lg-4", "col-md-6", "gx-0", "text-center", "cart-grid");
+        section.idName
         section.innerHTML = `
-        <div class="col-12 gx-0 text-center mi-title-container" id="entradas">
-            <div class="mi-title">
-                <h3>
-                    ${producto.categoria}:
-                </h3>
-            </div>
-        </div>
-        <div class="col-lg-7 ${producto.orientacion} col-md-12 gx-0 mi-img-container">
-        <img loading="lazy" src="${producto.img}" alt="${producto.nombre}">
-        </div>
-        <div class="col-lg-5 col-md-12 gx-0 mi-desc-container">
-            <div class="mi-desc">
-                <div class="text-center mi-desc-title">
-                    <h4>
-                        ${producto.nombre}
-                    </h4>
-                </div>
-                <div class="text-center mi-desc-p">
-                    <p>
-                        ${producto.descripcion}
-                    </p>
-                </div>
-                <div class="mi-desc-details">
-                    <div class="container-fluid">
-                        <div class="row details-row">
-                            <div class="col-lg-6 col-md-12 details-items">
-                                <div class="detail-calific">
-                                    <h5>Calificacion:</h5>
-                                    <div class="detail-calific-img">
-                                        <img src="${producto.fire1}">
-                                        <img src="${producto.fire2}">
-                                        <img src="${producto.fire3}">
-                                        <img src="${producto.fire4}">
-                                        <img src="${producto.fire5}">
-                                    </div>       
-                                </div>
-                                <h5>Precio: $${producto.precio}</h5>
-                                <h5>Opcion vegetariana: ${producto.oveg}</h5>
-                                <button class='btn aa-carrito-btn' onClick="addProductoToCart(${productoIndex})">Añadir al carrito</button><br>
-                                <a href="#indice">Ir al indice</a>
-                            </div>
-                            <div class="col-lg-6 col-md-12 details-ing-container">
-                                <h6 class="text-center">lista completa de ingredientes</h6>
-                                <ul>
-                                    <li>Ingrediente #1</li>
-                                    <li>Ingrediente #2</li>
-                                    <li>Ingrediente #3</li>
-                                    <li>Ingrediente #4</li>
-                                </ul>
-                                <p>
-                                    ${producto.condimentos}
-                                </p>
-                            </div>
-                        </div>
+        <div class="card" style="width: 18rem;" id="${producto.categoria}">
+            <img src="${producto.img}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title mi-desc-title">${producto.nombre}</h5>
+                <div class="detail-calific">
+                    <h5>Calificación:</h5>
+                    <div class="detail-calific-img">
+                        <img src="${producto.fire1}">
+                        <img src="${producto.fire2}">
+                        <img src="${producto.fire3}">
+                        <img src="${producto.fire4}">
+                        <img src="${producto.fire5}">
                     </div>
                 </div>
+                <h5 class="details-pds" >Precio: $${producto.precio}</h5>
+                <h5 class="details-pds" >Opción vegetariana: ${producto.oveg}</h5>       
+                <button class='btn aa-carrito-btn' onClick="addProductoToCart(${productoIndex})">Añadir al carrito</button><br>
+                <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
+                <a href="#indice">Ir al indice</a><br>
             </div>
         </div>
         `;
         contenedor.appendChild(section)
+        
     })
 };
+
+window.vermas = (descripcion, condimentos, ingredientes, productoIndex) => {
+    Swal.fire({
+        title: '<strong class="lista-de-ingredientes-title">Lista de <u>ingredientes principales</u>:</strong>',
+        icon: 'info',
+        html:`
+        <div class="vermas-alert-content">
+            <p>
+                ${ingredientes}.
+            </p>
+            <p>
+                <strong>Descripción:</u></strong><br>
+                ${descripcion}
+            </p><br>
+            <p>
+                <strong>Condimentos:</u></strong><br>
+                ${condimentos}
+            </p><br>
+            <button class='btn alert-carrito-btn' onClick="addProductoToCart(${productoIndex})">Añadir al carrito</button><br>
+        </div>`,
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText:
+          '<i class="fa fa-thumbs-up"></i> Aceptar',
+      })
+}
 
 // CARRITO CHECKER DE PRODUCTO ↓ ↓ ↓ 
 window.addProductoToCart = (productoIndex) => {
@@ -129,7 +121,7 @@ const buildProductosCart = () => {
     modalCarritoProducto.innerHTML = '';
     if (cartProducto.length > 0) {
         cartProducto.forEach ((producto, productoIndex) => {
-            totalProductos = totalProductos + producto.precio;
+            totalProductos += producto.precio;
             const carritoContainer = document.createElement('div');
             carritoContainer.classList.add('row', 'cart-row')
             carritoContainer.innerHTML = `

@@ -102,6 +102,12 @@ nav {
   @include all-center(column);
   @include navbar-deli;
   @include navbar-reserv;
+  .shopping-bag {
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
 }
 
 // HEADER STYLES
@@ -192,10 +198,93 @@ footer {
   @include cart-main-container;
 }
 
+.cart-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 15px 0;
+  img {
+    height: 250px;
+    object-fit: cover;
+  }
+  .card-body {
+    .mi-desc-title {
+      text-transform: uppercase;
+      color: $clr-main-dark;
+      font-weight: 700;
+      font-family: $ff-body;
+    }
+    .detail-calific {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      h5 {
+        text-transform: uppercase;
+        color: $clr-main-dark;
+        font-weight: 600;
+        font-family: $ff-body;
+        font-size: 16px;
+      }
+      .detail-calific-img {
+        display: flex;
+        img {
+          height: 20px;
+        }
+      }
+    }
+    .details-pds {
+      text-transform: uppercase;
+      color: $clr-main-dark;
+      font-weight: 600;
+      font-family: $ff-body;
+      font-size: 16px;
+    }
+    .aa-carrito-btn {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      background-color: white;
+      color: $clr-main-dark;
+      border: 2px solid $clr-main-dark;
+      font-family: $ff-body;
+      font-weight: 500;
+      &:hover {
+        background-color: $clr-main-dark;
+        color: white;
+      }
+    }
+    .btn-vermas {
+      margin-bottom: 15px;
+      background-color: $clr-main-dark;
+      color: white;
+      border: 2px solid $clr-main-dark;
+      font-family: $ff-body;
+      font-weight: 500;
+      &:hover {
+        background-color: white;
+        color: $clr-main-dark;
+      }
+    }
+  }
+}
 
-
-
-
+.lista-de-ingredientes-title {
+  color: $clr-main-dark;
+}
+.vermas-alert-content *{
+  color: $clr-main-dark;
+}
+.alert-carrito-btn {
+  background-color: white !important;
+  color: $clr-main-dark !important;
+  border: 2px solid $clr-main-dark !important;
+  font-family: $ff-body !important;
+  font-weight: 500 !important;
+  &:hover {
+    background-color: $clr-main-dark !important;
+    color: white !important;
+  }
+}
 // * {
 //   outline: 1px solid red;
 // }
