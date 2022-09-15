@@ -242,7 +242,7 @@ let productos = [
     fire4: '../assets/icons/menu/fire.png', 
     fire5: '../assets/icons/menu/fire.png', 
 
-    precio: 20, 
+    precio: 4900, 
 
     oveg: 'NO', 
     
@@ -268,7 +268,7 @@ let productos = [
     fire4: '../assets/icons/menu/fire.png', 
     fire5: '../assets/icons/menu/fire.png', 
 
-    precio: 50, 
+    precio: 5400, 
 
     oveg: 'NO', 
 
