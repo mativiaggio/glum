@@ -126,7 +126,7 @@ const buildProductosCart = () => {
             carritoContainer.classList.add('row', 'cart-row')
             carritoContainer.innerHTML = `
                 <div class="col-lg-2 col-md-6 cart-img">
-                <img src="${producto.img}" alt="${producto.nombre}">
+                <img loading="lazy" src="${producto.img}" alt="${producto.nombre}">
                 </div>
                 <div class="col-lg-2 col-md-6 cart-name"><p>${producto.nombre}</p></div>
                 <div class="col-lg-2 col-md-6 cart-price"><p>$${producto.precio}</p></div>
