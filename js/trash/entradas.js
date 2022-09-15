@@ -1,105 +1,6 @@
-let entradas = [
+import { entradas } from "../objects/menu-objects.js";
 
-    {id: 0,
-        
-    nombre: 'entrada fria',
-
-    img: '../assets/menu/1entradas/entradaFria-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png',  
-
-    precio: 4200, 
-
-    oveg: 'SI', 
-
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',},
-
-    {id: 1,
-        
-    nombre: 'corn deluxe',
-
-    img: '../assets/menu/1entradas/cornDeluxe-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire-empty.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png',
-
-    precio: 2100, 
-
-    oveg: 'SI', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: 'order-lg-1',
-
-    },
-
-    {id: 2,
-        
-    nombre: 'rabas',
-
-    img: '../assets/menu/1entradas/rabas-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
-
-    precio: 3400, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: '',
-
-    },
-
-    {id: 3,
-        
-    nombre: 'tabla de quesos',
-
-    img: '../assets/menu/1entradas/tablaDeQuesos-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png',  
-
-    precio: 3600, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-    
-    orientacion: 'order-lg-1',
-
-    },
-
-]
-
-/* 
-
-ENTRADAS
-
-*/
-
+// ENTRADAS ↓ ↓ ↓ 
 const buildEntradas = () => {
     let contenedor = document.getElementById("container-entradas");
     entradas.forEach((entrada, entradaIndex) => {
@@ -162,8 +63,8 @@ const buildEntradas = () => {
     })
 };
 
-// CARRITO CHECKER DE ENTRADA
-const addEntradaToCart = (entradaIndex) => {
+// CARRITO CHECKER DE ENTRADA ↓ ↓ ↓ 
+window.addEntradaToCart = (entradaIndex) => {
     
     const indexFinder = cartEntrada.findIndex((item) => {
         return item.id === entradas[entradaIndex].id;
@@ -215,13 +116,12 @@ const addEntradaToCart = (entradaIndex) => {
     }
 };
 
-// CONTRUCTOR DE CARRITO DE ENTRADA
-
+// CONTRUCTOR DE CARRITO DE ENTRADA ↓ ↓ ↓ 
 const buildEntradasCart = () => {
     modalCarritoEntrada.innerHTML = '';
     if (cartEntrada.length > 0) {
         cartEntrada.forEach ((entrada, entradaIndex) => {
-            total = total + entrada.precio * entrada.quant;
+            totalEntradas = totalEntradas + entrada.precio;
             const carritoContainer = document.createElement('div');
             carritoContainer.classList.add('row', 'cart-row')
             carritoContainer.innerHTML = `
@@ -236,9 +136,17 @@ const buildEntradasCart = () => {
             `;
             modalCarritoEntrada.appendChild(carritoContainer);
         })
+        const totalContainer = document.createElement('div');
+        totalContainer.className = 'total-carrito'
+        totalContainer.innerHTML = `<div class="total"> total a pagar: $${totalEntradas}</div>`
+        modalCarritoEntrada.appendChild(totalContainer);
+    } else {
+        modalCarritoEntrada.classList.remove('cart')
     }
 };
-const removeEntrada = (entradaIndex) => {
+
+// ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
+window.removeEntrada = (entradaIndex) => {
     cartEntrada.splice(entradaIndex,1);
     const Toast = Swal.mixin({
         toast: true,
@@ -259,7 +167,14 @@ const removeEntrada = (entradaIndex) => {
     buildEntradasCart();
 }
 
-buildEntradas();
-let total = 0;
+// CARRITO INICIAL ↓ ↓ ↓ 
 let cartEntrada = [];
+
+// TOTAL DE PRODUCTO ↓ ↓ ↓ 
+let totalEntradas = 0;
+
+// MODAL DE CARRITO ↓ ↓ ↓ 
 let modalCarritoEntrada = document.querySelector('#cart-container-entrada');
+
+export { buildEntradas, totalEntradas };
+

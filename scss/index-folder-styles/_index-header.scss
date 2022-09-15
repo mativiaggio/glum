@@ -1,3 +1,4 @@
+@use '../global/' as *;
 @mixin header-mquery {
     @media screen and (min-width: 62.1em) {
         margin-left: 100px;
@@ -23,4 +24,26 @@
     font-size: 80px;
     text-shadow: 0px 5px 4px rgba(0, 0, 0, 0.3);
     }
+}
+
+@mixin index-cta {
+  margin-top: 20px;
+  a {
+    button {
+      background-color: white;
+      width: fit-content;
+      font-size: x-large;
+      text-transform: uppercase;
+      font-family: $ff-body;
+      font-weight: 700;
+      border-radius: 50px;
+      color: $clr-main-dark;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.459);
+      &:hover {
+        background-color: $clr-main-dark;
+        color: white;
+        border-color: $clr-main-dark;
+      }  
+    }
+  }
 }
