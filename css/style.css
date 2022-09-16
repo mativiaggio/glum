@@ -854,6 +854,7 @@ footer .footer-navbar p {
   height: 75px;
   width: 110px;
   border-radius: 5px;
+  object-fit: cover;
 }
 .cart-main-container .cart-container .cart-row .cart-name {
   font-family: "Montserrat", sans-serif;

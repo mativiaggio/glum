@@ -27,7 +27,7 @@ const buildProductos = () => {
                 <h5 class="details-pds" >Opción vegetariana: ${producto.oveg}</h5>       
                 <button class='btn aa-carrito-btn' onClick="addProductoToCart(${productoIndex})">Añadir al carrito</button><br>
                 <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
-                <a href="#indice">Ir al indice</a><br>
+                <a href="#indice">Ir al indice</a>
             </div>
         </div>
         `;
