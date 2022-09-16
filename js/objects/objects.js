@@ -417,7 +417,7 @@ let productos = [
 
     categoria: 'pescado',
         
-    nombre: 'sushi',
+    nombre: 'oshizushi',
 
     img: '../assets/menu/3platosPrincipales/pescados/oshizushi-min.jpg',
 
