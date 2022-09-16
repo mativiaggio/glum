@@ -2,6 +2,8 @@ let productos = [
 
     {id: 0,
     
+    cantidad: 1,
+
     categoria: 'entrada',
 
     nombre: 'entrada fría',
@@ -27,7 +29,9 @@ let productos = [
     },
 
     {id: 1,
-        
+
+    cantidad: 1,
+
     categoria: 'entrada',
 
     nombre: 'corn deluxe',
@@ -54,7 +58,9 @@ let productos = [
     },
 
     {id: 2,
-    
+
+    cantidad: 1,
+
     categoria: 'entrada',
 
     nombre: 'rabas',
@@ -82,6 +88,8 @@ let productos = [
 
     {id: 3,
         
+    cantidad: 1,
+
     categoria: 'entrada',
 
     nombre: 'tabla de quesos',
@@ -109,6 +117,9 @@ let productos = [
     }, 
 
     {id: 4,
+
+    cantidad: 1,
+
     categoria: 'ensalada',
     
     nombre: 'premium salad',
@@ -134,6 +145,8 @@ let productos = [
     },
     
     {id: 5,
+
+    cantidad: 1,
 
     categoria: 'ensalada',
         
@@ -163,6 +176,8 @@ let productos = [
 
     {id: 6,
 
+    cantidad: 1,
+
     categoria: 'ensalada',
         
     nombre: 'sea salad',
@@ -190,6 +205,8 @@ let productos = [
     },
 
     {id: 7,
+
+    cantidad: 1,
 
     categoria: 'ensalada',
         
@@ -219,6 +236,8 @@ let productos = [
 
     {id: 8,
 
+    cantidad: 1,
+
     categoria: 'carne',
 
     nombre: 'tomahawk',
@@ -246,6 +265,8 @@ let productos = [
     },
     
     {id: 9,
+
+    cantidad: 1,
 
     categoria: 'carne',
         
@@ -275,6 +296,8 @@ let productos = [
 
     {id: 10,
 
+    cantidad: 1,
+
     categoria: 'carne',
 
     nombre: 'entraña con papas',
@@ -302,6 +325,8 @@ let productos = [
     },
 
     {id: 11,
+
+    cantidad: 1,
 
     categoria: 'carne',
         
@@ -331,6 +356,8 @@ let productos = [
 
     {id: 12,
 
+    cantidad: 1,
+
     categoria: 'pescado',
         
     nombre: 'salmon',
@@ -358,6 +385,8 @@ let productos = [
     },
 
     {id: 13,
+
+    cantidad: 1,
 
     categoria: 'pescado',
         
@@ -387,6 +416,8 @@ let productos = [
 
     {id: 14,
 
+    cantidad: 1,
+
     categoria: 'pescado',
         
     nombre: 'sushi',
@@ -415,6 +446,8 @@ let productos = [
 
     {id: 15,
 
+    cantidad: 1,
+
     categoria: 'pescado',
         
     nombre: 'oshizushi',
@@ -441,7 +474,9 @@ let productos = [
     
     },
 
-    {id: 17,
+    {id: 16,
+
+    cantidad: 1,
 
     categoria: 'pasta',
         
@@ -469,7 +504,9 @@ let productos = [
     
     },
 
-    {id: 18,
+    {id: 17,
+
+    cantidad: 1,
 
     categoria: 'pasta',
         
@@ -497,7 +534,9 @@ let productos = [
     
     },
 
-    {id: 19,
+    {id: 18,
+
+    cantidad: 1,
 
     categoria: 'pasta',
         
@@ -525,7 +564,9 @@ let productos = [
     
     },
 
-    {id: 20,
+    {id: 19,
+
+    cantidad: 1,
 
     categoria: 'spagetti',
         
@@ -553,7 +594,9 @@ let productos = [
     
     },
 
-    {id: 21,
+    {id: 20,
+
+    cantidad: 1,
 
     categoria: 'extra',
         
@@ -581,7 +624,9 @@ let productos = [
     
     },
 
-    {id: 22,
+    {id: 21,
+
+    cantidad: 1,
 
     categoria: 'extra',
         
@@ -609,7 +654,9 @@ let productos = [
     
     },
 
-    {id: 23,
+    {id: 22,
+
+    cantidad: 1,
 
     categoria: 'extra',
         
@@ -637,7 +684,9 @@ let productos = [
     
     },
 
-    {id: 24,
+    {id: 23,
+
+    cantidad: 1,
 
     categoria: 'extra',
         
@@ -665,7 +714,9 @@ let productos = [
     
     },
 
-    {id: 25,
+    {id: 24,
+
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -693,7 +744,9 @@ let productos = [
     
     },
 
-    {id: 26,
+    {id: 25,
+
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -721,7 +774,9 @@ let productos = [
     
     },
     
-    {id: 27,
+    {id: 26,
+
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -749,7 +804,9 @@ let productos = [
     
     },
 
-    {id: 28,
+    {id: 27,
+
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -777,7 +834,9 @@ let productos = [
     
     },
 
-    {id: 29,
+    {id: 28,
+
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -805,7 +864,9 @@ let productos = [
     
     },
 
-    {id: 30,
+    {id: 29,
+
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -834,7 +895,9 @@ let productos = [
     },
 
 
-    {id: 31,
+    {id: 30,
+    
+    cantidad: 1,
 
     categoria: 'postre',
         
@@ -862,8 +925,10 @@ let productos = [
     
     },
 
-    {id: 32,
+    {id: 31,
 
+    cantidad: 1,
+    
     categoria: 'postre',
         
     nombre: 'caramel cake',

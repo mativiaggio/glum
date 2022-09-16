@@ -1,6 +1,5 @@
 import { productos } from "../objects/objects.js"
 
-
 // PRODUCTOS ↓ ↓ ↓ 
 const buildProductos = () => {
     let contenedor = document.getElementById("container-productos");
@@ -25,7 +24,7 @@ const buildProductos = () => {
                 </div>
                 <h5 class="details-pds" >Precio: $${producto.precio}</h5>
                 <h5 class="details-pds" >Opción vegetariana: ${producto.oveg}</h5>       
-                <button class='btn aa-carrito-btn' onClick="addProductoToCart(${productoIndex})">Añadir al carrito</button><br>
+                <button class='btn aa-carrito-btn' onClick="agregarAlCarrito(${productoIndex})">Añadir al carrito</button><br>
                 <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
                 <a href="#indice">Ir al indice</a>
             </div>
@@ -121,34 +120,85 @@ const buildProductosCart = () => {
     modalCarritoProducto.innerHTML = '';
     if (cartProducto.length > 0) {
         cartProducto.forEach ((producto, productoIndex) => {
-            totalProductos += producto.precio;
             const carritoContainer = document.createElement('div');
             carritoContainer.classList.add('row', 'cart-row')
             carritoContainer.innerHTML = `
                 <div class="col-lg-2 col-md-6 cart-img">
-                <img loading="lazy" src="${producto.img}" alt="${producto.nombre}">
+                <img src="${producto.img}" alt="${producto.nombre}">
                 </div>
                 <div class="col-lg-2 col-md-6 cart-name"><p>${producto.nombre}</p></div>
                 <div class="col-lg-2 col-md-6 cart-price"><p>$${producto.precio}</p></div>
-                <div class="col-lg-2 col-md-6 cart-quant"><p>(${producto.quant})</p></div>
-                <div class="col-lg-2 col-md-6 cart-price">$${producto.precio * producto.quant}</div>
+                <div class="col-lg-2 col-md-6 cart-quant"><p>(${producto.cantidad})</p></div>
+                <div class="col-lg-2 col-md-6 cart-price">$${producto.precio * producto.cantidad}</div>
                 <div class="col-lg-2 col-md-6 cart-delete"><button class="btn cart-delete-btn" onClick="removeProducto(${productoIndex})">eliminar</button></div>
             `;
             modalCarritoProducto.appendChild(carritoContainer);
-        })
-        const totalContainer = document.createElement('div');
-        totalContainer.className = 'total-carrito'
-        totalContainer.innerHTML = `<div class="total"> total a pagar: $${totalProductos}</div>`
-        modalCarritoProducto.appendChild(totalContainer);
+        });
+        const totalAcumulado = document.getElementById("totalAcumulado");
+        totalAcumulado.innerText = cartProducto
+            .map((item) => item.precio * item.cantidad)
+            .reduce((prev, current) => prev + current, totalProductos);
     } else {
         modalCarritoProducto.classList.remove('cart')
     }
 };
 
+window.agregarAlCarrito = (productoId) => {
+    const existe = cartProducto.some((prod) => prod.id === productoId);
+  
+    if (existe) {
+        cartProducto.map((prod) => {
+        if (prod.id === productoId) {
+          prod.cantidad++;
+        }
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: `Producto agregado con exito!`
+          })
+      });
+    } else {
+      const producto = productos.find((prodId) => prodId.id === productoId);
+      cartProducto.push(producto);
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: `Producto agregado con exito!`
+      })
+    }
+    buildProductosCart();
+  };
+
+
 // ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
 window.removeProducto = (productoIndex) => {
     cartProducto.splice(productoIndex,1);
-    totalProductos = totalProductos * 0
+    const totalAcumulado = document.getElementById("totalAcumulado");
+    totalAcumulado.innerText = cartProducto
+        .map((item) => item.precio * item.cantidad)
+        .reduce((prev, current) => prev - current, totalProductos);
     const Toast = Swal.mixin({
         toast: true,
         position: 'bottom-end',

@@ -111,25 +111,27 @@
         background-color: rgb(151, 151, 151);
         }
     }
-    .total-carrito {
-        display: flex;
-        justify-content: end;
-        .total {
-        font-family: $ff-body;
-        color: $clr-main-dark;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-align: start;
-        } 
-    }
-    }
+}
     #totalAllContainer {
-    .total {
-        font-family: $ff-body;
-        color: $clr-main-dark;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-align: start;
-    }
+        .total-carrito {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            justify-content: center;
+            .total {
+            font-family: $ff-body;
+            color: $clr-main-dark;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-align: start;
+            } 
+            .total {
+                font-family: $ff-body;
+                color: $clr-main-dark;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: start;
+            }
+        }
     }
 }
