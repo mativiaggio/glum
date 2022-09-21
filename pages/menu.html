@@ -28,7 +28,7 @@
                                 <a class="nav-link navbar-links active" aria-current="page" href="../index.html">inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navbar-links active" aria-current="page" href="#">menu</a>
+                                <a class="nav-link navbar-links active" aria-current="page" href="./menu.html">menu</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link navbar-links active" href="../index.html#quienes-somos">sobre nosotros</a>
@@ -43,7 +43,7 @@
                                 <a class="nav-link active btn-reserva text-center" href="#">reservar ya</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active shopping-bag text-center" href="#cart-title"><img src="../assets/icons/navbar/shopping-bag.png" alt="shopping bag"></a>
+                                <a class="nav-link active shopping-bag text-center" href="./cart.html"><img src="../assets/icons/navbar/shopping-bag.png" alt="shopping bag"></a>
                             </li>
                         </ul>
                     </div>
@@ -110,41 +110,37 @@
         </section>
         <section class="row mi-row" id="container-productos" style="height: fit-content;">
         </section>
+        <section class="cart-main-container">
+            <div class="row cart-header" id="cart-title">
+                <div class="col-12 cart-title-container">
+                    <h1>¡Bienvenido a tu carrito!</h1>
+                    <div class="col-12 hr" id="hr-top"></div>
+                </div>
+            </div>
+            <div class="cpt-md-container">
+                <div class="col-12 cart-products-title-md gx-0"><h3>tus productos:</h3></div>
+                <hr>
+            </div>
+            <div class="row cart-table" style="margin: 20px 10px 0 10px;">
+                <div class="col-2 cart-products-title gx-0"><h3>tus productos:</h3></div>
+                <div class="col-2 gx-0 ct-name"><p>nombre</p></div>
+                <div class="col-2 gx-0"><p>precio</p></div>
+                <div class="col-2 gx-0"><p>cantidad</p></div>
+                <div class="col-2 gx-0"><p>total</p></div>
+                <div class="col-2 gx-0"></div>
+                <hr>
+            </div>
+            <div class="cart-container" id="cart-container">     
+            </div>
+            <div id="totalAllContainer">
+                <div  class="total-carrito" >
+                    <p class="total">
+                        Precio total: $<span id="totalAcumulado">0</span>
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
-    <section class="cart-main-container">
-        <div class="row cart-header" id="cart-title">
-            <div class="col-12 cart-title-container">
-                <h1>¡Bienvenido a tu carrito!</h1>
-                <div class="col-12 hr" id="hr-top"></div>
-            </div>
-        </div>
-        <div class="cpt-md-container">
-            <div class="col-12 cart-products-title-md gx-0"><h3>tus productos:</h3></div>
-            <hr>
-        </div>
-        <div class="row cart-table" style="margin: 20px 10px 0 10px;">
-            <div class="col-2 cart-products-title gx-0"><h3>tus productos:</h3></div>
-            <div class="col-2 gx-0 ct-name"><p>nombre</p></div>
-            <div class="col-2 gx-0"><p>precio</p></div>
-            <div class="col-2 gx-0"><p>cantidad</p></div>
-            <div class="col-2 gx-0"><p>total</p></div>
-            <div class="col-2 gx-0"></div>
-            <hr>
-        </div>
-        <div class="cart-container" id="cart-container-entrada">     
-        </div>
-        <div class="cart-container" id="cart-container-ensalada">
-        </div>
-        <div class="cart-container" id="cart-container-carne">
-        </div>
-        <div id="totalAllContainer">
-            <div  class="total-carrito" >
-                <p class="total">
-                    Precio total: $<span id="totalAcumulado">0</span>
-                </p>
-            </div>
-        </div>
-    </section>
     <footer class="row">
         <div class="col-12 gx-0">
             <div class="footer-title-container">

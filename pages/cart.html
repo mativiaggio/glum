@@ -3,9 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>GLUM - Menu</title>
+        <title>GLUM - Cart</title>
         <link rel="stylesheet" href="../css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+        <link rel="manifest" href="../assets/ico/site.webmanifest">
       </head>
 <body class="container-fluid">
     <nav class="row">
@@ -39,7 +43,7 @@
                                 <a class="nav-link active btn-reserva text-center" href="#">reservar ya</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active btn-reserva text-center" href="./cart.html">carrito</a>
+                                <a class="nav-link active shopping-bag text-center" href="#"><img src="../assets/icons/navbar/shopping-bag.png" alt="shopping bag"></a>
                             </li>
                         </ul>
                     </div>
@@ -47,17 +51,37 @@
             </div>
         </div>
     </nav>
-    <header class="row cart-header">
-        <div class="col-12 cart-title-container">
-            <h1>¡Bienvenido a tu carrito!</h1>
-            <div class="col-12 hr" id="hr-top"></div>
-        </div>
-    </header>
-    <div class="cart-products-title">
-        <h3>tus productos:</h3>
-    </div>
-    <main class="cart-container" id="cart-container">
-       
+    <main>
+        <section class="cart-main-container">
+            <div class="row cart-header" id="cart-title">
+                <div class="col-12 cart-title-container">
+                    <h1>¡Bienvenido a tu carrito!</h1>
+                    <div class="col-12 hr" id="hr-top"></div>
+                </div>
+            </div>
+            <div class="cpt-md-container">
+                <div class="col-12 cart-products-title-md gx-0"><h3>tus productos:</h3></div>
+                <hr>
+            </div>
+            <div class="row cart-table" style="margin: 20px 10px 0 10px;">
+                <div class="col-2 cart-products-title gx-0"><h3>tus productos:</h3></div>
+                <div class="col-2 gx-0 ct-name"><p>nombre</p></div>
+                <div class="col-2 gx-0"><p>precio</p></div>
+                <div class="col-2 gx-0"><p>cantidad</p></div>
+                <div class="col-2 gx-0"><p>total</p></div>
+                <div class="col-2 gx-0"></div>
+                <hr>
+            </div>
+            <div class="cart-container" id="cart-container">     
+            </div>
+            <div id="totalAllContainer">
+                <div  class="total-carrito" >
+                    <p class="total">
+                        Precio total: $<span id="totalAcumulado">0</span>
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="row">
         <div class="col-12 gx-0">
@@ -91,6 +115,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
     <!-- PERSONAL JS -->
-    <script src="../js/menu.js"></script>
+    <script type="module" src="../js/menu-main.js"></script>
+
+    <!-- SWEETALERT -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

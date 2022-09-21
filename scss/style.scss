@@ -198,12 +198,24 @@ footer {
   @include cart-main-container;
 }
 
+#container-productos {
+  .card {
+    @media screen and (max-width: 47.9375em){
+      width: 100vw !important;
+      border-radius: 0 !important;
+    }
+  }
+}
 .cart-grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 15px 0 15px 0;
+  @media screen and (max-width: 64em){
+    margin: 0 0 0 0;
+    border-radius: 0 !important;
+  }
   img {
     height: 250px;
     object-fit: cover;
@@ -222,7 +234,7 @@ footer {
       h5 {
         text-transform: uppercase;
         color: $clr-main-dark;
-        font-weight: 600;
+        font-weight: 500;
         font-family: $ff-body;
         font-size: 16px;
       }
@@ -236,7 +248,7 @@ footer {
     .details-pds {
       text-transform: uppercase;
       color: $clr-main-dark;
-      font-weight: 600;
+      font-weight: 400;
       font-family: $ff-body;
       font-size: 16px;
     }

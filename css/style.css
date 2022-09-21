@@ -924,12 +924,25 @@ footer .footer-navbar p {
   text-align: start;
 }
 
+@media screen and (max-width: 47.9375em) {
+  #container-productos .card {
+    width: 100vw !important;
+    border-radius: 0 !important;
+  }
+}
+
 .cart-grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 15px 0 15px 0;
+}
+@media screen and (max-width: 64em) {
+  .cart-grid {
+    margin: 0 0 0 0;
+    border-radius: 0 !important;
+  }
 }
 .cart-grid img {
   height: 250px;
@@ -948,7 +961,7 @@ footer .footer-navbar p {
 .cart-grid .card-body .detail-calific h5 {
   text-transform: uppercase;
   color: hsl(206deg, 97%, 15%);
-  font-weight: 600;
+  font-weight: 500;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
@@ -961,7 +974,7 @@ footer .footer-navbar p {
 .cart-grid .card-body .details-pds {
   text-transform: uppercase;
   color: hsl(206deg, 97%, 15%);
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
