@@ -107,6 +107,20 @@ nav {
       height: 30px;
       width: 30px;
     }
+    .shopping-bag-container {
+      display: none;
+      height:350px;
+      width: 450px;
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      right: 10px;
+      overflow: hidden;
+    }
+    &:hover {
+      .shopping-bag-container {
+        display: block;
+      }
+    }
   }
 }
 
@@ -197,6 +211,11 @@ footer {
 .cart-main-container {
   @include cart-main-container;
 }
+#cmc-menu {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 
 #container-productos {
   .card {
@@ -229,7 +248,7 @@ footer {
     }
     .detail-calific {
       display: flex;
-      // align-items: center;
+      align-items: center;
       justify-content: center;
       h5 {
         text-transform: uppercase;
@@ -297,6 +316,6 @@ footer {
     color: white !important;
   }
 }
-// * {
-//   outline: 1px solid red;
-// }
+/* * {
+  outline: 1px solid red;
+} */

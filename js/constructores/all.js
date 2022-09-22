@@ -94,7 +94,7 @@ const buildProductosCart = () => {
                 <div class="col-lg-2 col-md-6 cart-name"><p>${producto.nombre}</p></div>
                 <div class="col-lg-2 col-md-6 cart-price"><p>$${producto.precio}</p></div>
                 <div class="col-lg-2 col-md-6 cart-quant"><p>(${producto.cantidad})</p></div>
-                <div class="col-lg-2 col-md-6 cart-price">$${producto.precio * producto.cantidad}</div>
+                <div class="col-lg-2 col-md-6 cart-total-price">$${producto.precio * producto.cantidad}</div>
                 <div class="col-lg-2 col-md-6 cart-delete"><button class="btn cart-delete-btn" onClick="removeProducto(${productoIndex})">eliminar</button></div>
             `;
             modalCarritoProducto2.appendChild(carritoContainer);
@@ -110,53 +110,6 @@ const buildProductosCart = () => {
 };
 
 // AÑADIR A CARRITO
-/* window.addToCart = (productoId) => {
-  const existe = cartProducto.some((prod) => prod.id === productoId);
-
-  if (existe) {
-      cartProducto.map((prod) => {
-      if (prod.id === productoId) {
-      prod.cantidad++;
-      }
-      const Toast = Swal.mixin({
-          toast: true,
-          position: 'bottom-end',
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-          }
-      })
-      
-      Toast.fire({
-          icon: 'success',
-          title: `Producto agregado con exito!`
-      })
-  });
-  } else {
-  const producto = productos.find((prodId) => prodId.id === productoId);
-  cartProducto.push(producto);
-  const Toast = Swal.mixin({
-      toast: true,
-      position: 'bottom-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-      toast.addEventListener('mouseenter', Swal.stopTimer)
-      toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-  })
-  
-  Toast.fire({
-      icon: 'success',
-      title: `Producto agregado con exito!`
-  })
-  }
-  buildProductosCart();
-}; */
 window.addToCart = (productoId) => {
     const productIdFinded = cartProducto.findIndex((elemento) => {
         return elemento.id === productos[productoId].id;
@@ -165,10 +118,46 @@ window.addToCart = (productoId) => {
         const productoAgregar = productos[productoId];
         productoAgregar.cantidad = 1;
         cartProducto.push(productoAgregar);
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Producto agregado al carrito!'
+          })
+
         actualizarStorage(cartProducto);
         buildProductosCart();
     }else {
         cartProducto[productIdFinded].cantidad += 1;
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Producto agregado al carrito!'
+          })
+
         actualizarStorage(cartProducto);
         buildProductosCart();
     }
@@ -177,11 +166,11 @@ window.addToCart = (productoId) => {
 // ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
 window.removeProducto = (productoIndex) => {
     cartProducto.splice(productoIndex,1);
-    // const totalAcumulado = document.getElementById("totalAcumulado");
-    // totalAcumulado.innerText = cartProducto
-    //     .map((item) => item.precio * item.cantidad)
-    //     .reduce((prev, current) => prev - current, totalProductos);
-    //     localStorage.setItem("cartProducto", JSON.stringify(cartProducto));
+    const totalAcumulado = document.getElementById("totalAcumulado");
+    totalAcumulado.innerText = cartProducto
+        .map((item) => item.precio * item.cantidad)
+        .reduce((prev, current) => prev - current, totalProductos);
+        localStorage.setItem("cartProducto", JSON.stringify(cartProducto));
     actualizarStorage(cartProducto);
     buildProductosCart();
     const Toast = Swal.mixin({
@@ -212,9 +201,9 @@ let cartProducto = [];
 let totalProductos = 0;
 
 // MODAL DE CARRITO ↓ ↓ ↓ 
-// let modalCarritoProducto = document.querySelector('#cart-container');
 let modalCarritoProducto2 = document.querySelector('#cart-container');
 
+// LOCAL STORAGE ↓ ↓ ↓
 if (localStorage.getItem("cartProducto")) {
     cartProducto = JSON.parse(localStorage.getItem("cartProducto"));
     buildProductosCart();
@@ -223,5 +212,6 @@ const actualizarStorage = (cartProducto) => {
     localStorage.setItem("cartProducto", JSON.stringify(cartProducto))
 };
 
+// EXPORT ↓ ↓ ↓
 export { buildProductos, firstAlert };
 

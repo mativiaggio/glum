@@ -42,8 +42,12 @@
                             <li class="nav-item">
                                 <a class="nav-link active btn-reserva text-center" href="#">reservar ya</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active shopping-bag text-center" href="./cart.html"><img src="../assets/icons/navbar/shopping-bag.png" alt="shopping bag"></a>
+                            <li class="nav-item shopping-bag">
+                                <a class="nav-link active shopping-bag text-center" href="./cart.html">
+                                    <img src="../assets/icons/navbar/shopping-bag.png" alt="shopping-bag" class="shopping-bag-img">
+                                </a>
+                                
+
                             </li>
                         </ul>
                     </div>
@@ -110,7 +114,7 @@
         </section>
         <section class="row mi-row" id="container-productos" style="height: fit-content;">
         </section>
-        <section class="cart-main-container">
+        <section class="cart-main-container" id="cmc-menu">
             <div class="row cart-header" id="cart-title">
                 <div class="col-12 cart-title-container">
                     <h1>¡Bienvenido a tu carrito!</h1>
@@ -173,7 +177,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
     <!-- PERSONAL JS -->
-    <script type="module" src="../js/menu-main.js"></script>
+    <script async type="module" src="../js/menu-main.js"></script>
 
     <!-- SWEETALERT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

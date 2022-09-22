@@ -1,7 +1,7 @@
 import { buildProductos, firstAlert } from "./constructores/all.js";
 
 
-firstAlert();
+//firstAlert();
 buildProductos();
 // buildEnsaladas();
 // buildCarnes();
