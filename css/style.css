@@ -4,131 +4,6 @@
   height: 100vh;
 }
 
-/* @mixin hover-cart-container {
-    .cpt-md-container {
-        margin-top: 25px;
-        visibility: hidden;
-        height: 0px;
-        @media screen and (max-width: 64em){
-            margin-top: 25px;
-            display: contents;
-            visibility: visible;
-            height: fit-content;
-        }
-        .cart-products-title-md {
-            h3 {
-            margin-top: 25px;
-            font-family: $ff-body;
-            color: $clr-main-dark;
-            font-weight: 700;
-            font-size: small !important;
-            text-transform: uppercase;
-            }
-        }
-    }
-    .cart-products-title{
-        h3 {
-            font-family: $ff-body;
-            color: $clr-main-dark;
-            font-weight: 700;
-            font-size: small !important;
-            text-transform: uppercase;
-        }
-    }
-    .cart-table {
-        div {
-            p {
-                text-align: start;
-                text-transform: uppercase;
-                color: $clr-main-dark;
-                font-family: $ff-body;
-                font-weight: 600;
-            }   
-        }
-        @media screen and (max-width: 64em) {
-            display: none;
-            visibility: hidden;
-            height: 0px;
-        }
-    }
-    .cart-container {
-        margin: 25px 10px 10px 10px;
-        .cart-row {
-            height: 75px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-bottom: 15px;
-            @media screen and (max-width: 64em) {
-                height: fit-content;
-            }
-            .cart-img {
-                img {
-                    height: 100%;
-                    width: 110px;
-                    border-radius: 5px;
-                    object-fit: cover;
-                }
-            }
-            .cart-name {
-                font-family: $ff-body;
-                color: $clr-main-dark;
-                font-weight: 600;
-                text-transform: uppercase;
-                text-align: start;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                p {
-                    font-size: small;
-                }
-                @media screen and (max-width: 64em) {
-                    margin-top: 15px;
-                }
-            } 
-            .cart-total-price {
-                font-family: $ff-body;
-                color: $clr-main-dark;
-                font-weight: 600;
-                text-transform: uppercase;
-                text-align: start;
-            }
-            .cart-price, .cart-quant {
-                display: none;
-            }
-            .cart-delete {
-                display: flex;
-                justify-content: center;
-                @media screen and (max-width: 64em) {
-                    margin-top: 15px;
-                    justify-content: flex-start;
-                }
-                .cart-delete-btn {
-                    background-color: $clr-main-dark;
-                    color: white;
-                    font-family: $ff-body;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    border: 2px solid $clr-main-dark;
-                    &:hover {
-                        background-color:white;
-                        color:  $clr-main-dark;
-                        border: 2px solid $clr-main-dark;
-                    }
-                }
-            }
-            .cart-hr {
-                margin-top: 5px;
-                height: 0.1px;
-                background-color: rgb(151, 151, 151);
-            }
-            .vermascart {
-                height: 45vh;
-                background-color: red;
-            }
-        }
-   }
-} */
 /* Box sizing rules */
 *,
 *::before,
@@ -959,7 +834,7 @@ footer .footer-navbar p {
   text-transform: uppercase;
 }
 .cart-main-container .cart-table div p {
-  text-align: start;
+  text-align: center;
   text-transform: uppercase;
   color: hsl(206deg, 97%, 15%);
   font-family: "Montserrat", sans-serif;
@@ -998,7 +873,7 @@ footer .footer-navbar p {
   color: hsl(206deg, 97%, 15%);
   font-weight: 600;
   text-transform: uppercase;
-  text-align: start;
+  text-align: center;
 }
 @media screen and (max-width: 64em) {
   .cart-main-container .cart-container .cart-row .cart-name {
@@ -1010,7 +885,7 @@ footer .footer-navbar p {
   color: hsl(206deg, 97%, 15%);
   font-weight: 600;
   text-transform: uppercase;
-  text-align: start;
+  text-align: center;
 }
 .cart-main-container .cart-container .cart-row .cart-delete {
   display: flex;
