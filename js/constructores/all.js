@@ -1,22 +1,5 @@
 import { productos } from "../objects/objects.js"
 
-const firstAlert = () => {
-    Swal.fire({
-        title: '<strong>IMPORTANTE</strong>',
-        icon: 'info',
-        html:
-          'Nuestro menú es <b>BASTANTE</b> extenso, te recomnedamos usar nuestro <b>indice</b> para seleccionar cada elementos!',
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Aceptar!',
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-        cancelButtonText:
-          '<i class="fa fa-thumbs-down"></i>',
-        cancelButtonAriaLabel: 'Thumbs down'
-    })
-}
 // PRODUCTOS ↓ ↓ ↓ 
 const buildProductos = () => {
     let contenedor = document.getElementById("container-productos");
@@ -213,5 +196,5 @@ const actualizarStorage = (cartProducto) => {
 };
 
 // EXPORT ↓ ↓ ↓
-export { buildProductos, firstAlert };
+export { buildProductos };
 
