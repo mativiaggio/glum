@@ -1,11 +1,5 @@
 import { productos } from "../objects/objects.js"
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     if (localStorage.getItem("cartProducto")) {
-//         cartProducto = JSON.parse(localStorage.getItem("cartProducto"));
-//         buildProductosCart();
-//   }
-// });
 const firstAlert = () => {
     Swal.fire({
         title: '<strong>IMPORTANTE</strong>',
