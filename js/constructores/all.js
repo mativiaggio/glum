@@ -122,7 +122,7 @@ window.addToCart = (productoId) => {
         actualizarStorage(cartProducto);
         buildProductosCart();
     }else {
-        cartProducto[productIdFinded].cantidad += 1;
+        cartProducto[productIdFinded].cantidad ++;
 
         const Toast = Swal.mixin({
             toast: true,
@@ -196,5 +196,5 @@ const actualizarStorage = (cartProducto) => {
 };
 
 // EXPORT ↓ ↓ ↓
-export { buildProductos };
+export { buildProductos, cartProducto };
 
