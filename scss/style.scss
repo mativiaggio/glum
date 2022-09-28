@@ -316,6 +316,25 @@ footer {
     color: white !important;
   }
 }
+
+.pay-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 15px;
+  .pay-btn {
+    text-transform: uppercase;
+    background-color: $clr-main-dark;
+    color: white;
+    &:hover {
+      background-color: white;
+      color: $clr-main-dark;
+      border-color: $clr-main-dark;
+    }
+  }
+}
+
 /* * {
   outline: 1px solid red;
 } */
+

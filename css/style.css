@@ -1042,6 +1042,23 @@ footer .footer-navbar p {
   color: white !important;
 }
 
+.pay-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.pay-btn-container .pay-btn {
+  text-transform: uppercase;
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+}
+.pay-btn-container .pay-btn:hover {
+  background-color: white;
+  color: hsl(206deg, 97%, 15%);
+  border-color: hsl(206deg, 97%, 15%);
+}
+
 /* * {
   outline: 1px solid red;
 } */
