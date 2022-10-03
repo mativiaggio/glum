@@ -5,7 +5,7 @@ const buildProductos = () => {
     let contenedor = document.getElementById("container-productos");
     productos.forEach((producto, productoIndex) => {
         let section = document.createElement("div");
-        section.classList.add("col-xl-3", "col-lg-4", "col-md-6", "gx-0", "text-center", "cart-grid");
+        section.classList.add("col-xl-3", "col-lg-4", "col-md-6", "gx-0", "text-center", "product-grid");
         section.idName
         section.innerHTML = `
         <div class="card" style="width: 18rem;" id="${producto.categoria}">
@@ -22,8 +22,7 @@ const buildProductos = () => {
                         <img src="${producto.fire5}">
                     </div>
                 </div>
-                <h5 class="details-pds" >Precio: $${producto.precio}</h5>
-                <h5 class="details-pds" >Opción vegetariana: ${producto.oveg}</h5>       
+                <h5 class="details-pds" >Precio: $${producto.precio}</h5>     
                 <button class='btn aa-carrito-btn' onClick="addToCart(${productoIndex})">Añadir al carrito</button><br>
                 <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
                 <a href="#indice">Ir al indice</a>
@@ -87,8 +86,12 @@ const buildProductosCart = () => {
         totalAcumulado.innerText = cartProducto
           .map((item) => item.precio * item.cantidad)
           .reduce((prev, current) => prev + current, totalProductos);
+        const btnApay = document.querySelector('#btn-a-pay');
+        btnApay.classList.add('nav-link');
     } else {
         modalCarritoProducto2.classList.remove('cart')
+        const btnApay = document.querySelector('#btn-a-pay');
+        btnApay.classList.add('nav-link', 'disabled');
     }
 };
 
@@ -183,8 +186,22 @@ window.pagar = () => {
         icon: 'info',
         html:
         'Completa la siguiente informacion para pagar!',
-        html: `    <div>
+        html: `<div class="payment-container">
         <form action="post">
+            <div class="form-payment-container">
+                <div class="visa">
+                    <label><img style="height: 50px;" src="../../assets/icons/payment/visa.png"></label><br>
+                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                </div>
+                <div class="mastercard">
+                    <label><img style="height: 50px;" src="../assets/icons/payment/mastercard.jpg"></label><br>
+                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                </div>
+                <div class="paypal">
+                    <label><img style="height: 50px;" src="../assets/icons/payment/paypal.png"></label><br>
+                    <input type="checkbox" id="cbox1" value="first_checkbox">
+                </div>
+            </div>
             <label>Name</label><br>
             <input type="text" name="Name" placeholder="John Doe"><br><br>
             <label>Card Number</label><br>
@@ -208,7 +225,6 @@ window.pagar = () => {
         '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: 'Thumbs down'
     });
-
     cartProducto.length != 0 ? cartProducto.length = 0 : null;
     const totalAcumulado = document.getElementById("totalAcumulado");
     totalAcumulado.innerText = cartProducto

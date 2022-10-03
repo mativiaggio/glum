@@ -127,3 +127,84 @@
       }
     }
 }
+@mixin container-productos {
+  .card {
+    @media screen and (max-width: 47.9375em){
+      width: 100vw !important;
+      border-radius: 0 !important;
+    }
+  }
+}
+@mixin product-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 15px 0;
+  @media screen and (max-width: 64em){
+    margin: 0 0 0 0;
+    border-radius: 0 !important;
+  }
+  img {
+    height: 250px;
+    object-fit: cover;
+  }
+  .card-body {
+    .mi-desc-title {
+      text-transform: uppercase;
+      color: $clr-main-dark;
+      font-weight: 700;
+      font-family: $ff-body;
+    }
+    .detail-calific {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h5 {
+        text-transform: uppercase;
+        color: $clr-main-dark;
+        font-weight: 500;
+        font-family: $ff-body;
+        font-size: 16px;
+      }
+      .detail-calific-img {
+        display: flex;
+        img {
+          height: 20px;
+        }
+      }
+    }
+    .details-pds {
+      text-transform: uppercase;
+      color: $clr-main-dark;
+      font-weight: 400;
+      font-family: $ff-body;
+      font-size: 16px;
+    }
+    .aa-carrito-btn {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      background-color: white;
+      color: $clr-main-dark;
+      border: 2px solid $clr-main-dark;
+      font-family: $ff-body;
+      font-weight: 500;
+      &:hover {
+        background-color: $clr-main-dark;
+        color: white;
+      }
+    }
+    .btn-vermas {
+      margin-bottom: 15px;
+      background-color: $clr-main-dark;
+      color: white;
+      border: 2px solid $clr-main-dark;
+      font-family: $ff-body;
+      font-weight: 500;
+      &:hover {
+        background-color: white;
+        color: $clr-main-dark;
+      }
+    }
+  }
+}

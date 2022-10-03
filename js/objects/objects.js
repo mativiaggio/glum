@@ -955,6 +955,35 @@ let productos = [
     
     },
 
-];
+    {id: 32,
 
+    cantidad: 1,
+
+    categoria: 'vino',
+        
+    nombre: 'Rateau Oraters Malbec',
+
+    img: '../assets/menu/6vinos/rateauOraters6-25-min.jpg',
+
+    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+
+    fire1: '../assets/icons/menu/fire.png',
+    fire2: '../assets/icons/menu/fire.png', 
+    fire3: '../assets/icons/menu/fire.png', 
+    fire4: '../assets/icons/menu/fire.png', 
+    fire5: '../assets/icons/menu/fire-empty.png', 
+
+    precio: 8970, 
+
+    oveg: '-', 
+
+    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+    orientacion: '',
+
+    ingredientes: 'Crema, Masa Humeda, Chocolate, Caramelo, Cerezas',
+
+    },
+
+];
 export { productos }

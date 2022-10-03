@@ -948,7 +948,7 @@ footer .footer-navbar p {
   }
 }
 
-.cart-grid {
+.product-grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -956,47 +956,47 @@ footer .footer-navbar p {
   margin: 15px 0 15px 0;
 }
 @media screen and (max-width: 64em) {
-  .cart-grid {
+  .product-grid {
     margin: 0 0 0 0;
     border-radius: 0 !important;
   }
 }
-.cart-grid img {
+.product-grid img {
   height: 250px;
   object-fit: cover;
 }
-.cart-grid .card-body .mi-desc-title {
+.product-grid .card-body .mi-desc-title {
   text-transform: uppercase;
   color: hsl(206deg, 97%, 15%);
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-.cart-grid .card-body .detail-calific {
+.product-grid .card-body .detail-calific {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cart-grid .card-body .detail-calific h5 {
+.product-grid .card-body .detail-calific h5 {
   text-transform: uppercase;
   color: hsl(206deg, 97%, 15%);
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
-.cart-grid .card-body .detail-calific .detail-calific-img {
+.product-grid .card-body .detail-calific .detail-calific-img {
   display: flex;
 }
-.cart-grid .card-body .detail-calific .detail-calific-img img {
+.product-grid .card-body .detail-calific .detail-calific-img img {
   height: 20px;
 }
-.cart-grid .card-body .details-pds {
+.product-grid .card-body .details-pds {
   text-transform: uppercase;
   color: hsl(206deg, 97%, 15%);
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
-.cart-grid .card-body .aa-carrito-btn {
+.product-grid .card-body .aa-carrito-btn {
   margin-top: 15px;
   margin-bottom: 15px;
   background-color: white;
@@ -1005,11 +1005,11 @@ footer .footer-navbar p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
-.cart-grid .card-body .aa-carrito-btn:hover {
+.product-grid .card-body .aa-carrito-btn:hover {
   background-color: hsl(206deg, 97%, 15%);
   color: white;
 }
-.cart-grid .card-body .btn-vermas {
+.product-grid .card-body .btn-vermas {
   margin-bottom: 15px;
   background-color: hsl(206deg, 97%, 15%);
   color: white;
@@ -1017,7 +1017,7 @@ footer .footer-navbar p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
-.cart-grid .card-body .btn-vermas:hover {
+.product-grid .card-body .btn-vermas:hover {
   background-color: white;
   color: hsl(206deg, 97%, 15%);
 }
@@ -1059,8 +1059,33 @@ footer .footer-navbar p {
   border-color: hsl(206deg, 97%, 15%);
 }
 
-/* * {
-  outline: 1px solid red;
-} */
+.payment-container {
+  margin-top: 80px;
+}
+.payment-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.payment-container form .form-payment-container {
+  display: flex;
+}
+.payment-container form .form-payment-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.payment-container form label {
+  color: hsl(206deg, 97%, 15%);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.payment-container form input {
+  margin-bottom: 5px;
+}
 
 /*# sourceMappingURL=style.css.map */
