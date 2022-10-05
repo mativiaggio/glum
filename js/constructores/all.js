@@ -103,12 +103,12 @@ const buildProductosCart = () => {
                 <div class="col-lg-2 col-md-6 cart-img">
                 <img src="${producto.img}" alt="${producto.nombre}">
                 </div>
-                <div class="col-lg-2 col-md-6 cart-name"><p>${producto.nombre}</p></div>
-                <div class="col-lg-2 col-md-6 cart-price"><p>$${producto.precio}</p></div>
+                <div class="col-lg-2 col-md-6 cart-name"><span>${producto.nombre}</span></div>
+                <div class="col-lg-2 col-md-6 cart-price"><span>$${producto.precio}</span></div>
                 <div class="col-lg-2 col-md-6 cart-quant d-flex">
-                    <button>-</button>
-                    <p>(${producto.cantidad})</p>
-                    <button onClick="addOneMore(${productoIndex})">+</button>
+                    <button class="btn btn-cart-ar" onClick="removeOne(${productoIndex})">-</button>
+                    <span>(${producto.cantidad})</span>
+                    <button class="btn btn-cart-ar" onClick="addOneMore(${productoIndex})">+</button>
                 </div>
                 <div class="col-lg-2 col-md-6 cart-total-price">$${producto.precio * producto.cantidad}</div>
                 <div class="col-lg-2 col-md-6 cart-delete"><button class="btn cart-delete-btn" onClick="removeProducto(${productoIndex})">eliminar</button></div>
@@ -186,8 +186,20 @@ window.addToCart = (productoId) => {
             }
         })
 };
-window.addOneMore = (productoId) => {
-    console.log(productos[productoId].cantidad)
+
+window.addOneMore = (productoIndex) => {
+    cartProducto[productoIndex].cantidad ++;
+    actualizarStorage(cartProducto);
+    buildProductosCart();
+}
+
+window.removeOne = (productoIndex) => {
+    while (cartProducto[productoIndex].cantidad > 1) {
+        cartProducto[productoIndex].cantidad --;
+        actualizarStorage(cartProducto);
+        buildProductosCart();
+        break;
+    }
 }
 // ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
 window.removeProducto = (productoIndex) => {

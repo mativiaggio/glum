@@ -84,6 +84,26 @@
         text-transform: uppercase;
         text-align: center;
         }
+
+        .cart-quant {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .btn-cart-ar {
+                background-color: rgba(255, 0, 0, 0);
+                font-size: x-large;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 500;
+                color: $clr-main-dark;
+                &:hover {
+                    background-color: $clr-main-dark;
+                    color: white;
+                }
+            }
+        }
         .cart-delete {
         display: flex;
         justify-content: center;

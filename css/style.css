@@ -13,7 +13,8 @@
 
 /*The following line prevents the navbar to obscure the elements.*/
 html {
-  scroll-padding-top: 67px; /* height of sticky navbar */
+  scroll-padding-top: 67px;
+  /* height of sticky navbar */
 }
 
 /* Remove default margin */
@@ -886,6 +887,25 @@ footer .footer-navbar p {
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
+}
+.cart-main-container .cart-container .cart-row .cart-quant {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cart-main-container .cart-container .cart-row .cart-quant .btn-cart-ar {
+  background-color: rgba(255, 0, 0, 0);
+  font-size: x-large;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: hsl(206deg, 97%, 15%);
+}
+.cart-main-container .cart-container .cart-row .cart-quant .btn-cart-ar:hover {
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
 }
 .cart-main-container .cart-container .cart-row .cart-delete {
   display: flex;
