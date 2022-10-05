@@ -2,6 +2,7 @@
 @use './index-folder-styles/' as *;
 @use './menu-folder-styles/' as *;
 @use './cart-folder-styles/' as *;
+
 /* Box sizing rules */
 *,
 *::before,
@@ -12,7 +13,8 @@
 
 /*The following line prevents the navbar to obscure the elements.*/
 html {
-  scroll-padding-top: 67px; /* height of sticky navbar */
+  scroll-padding-top: 67px;
+  /* height of sticky navbar */
 }
 
 /* Remove default margin */
@@ -85,37 +87,44 @@ select {
 // }
 nav {
   #navbarSupportedContent {
-      transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
   }
 }
+
 .navbar {
   background-color: $clr-main-dark;
   @include better-navbar;
 }
+
 .navbar-brand {
   @include navbar-logo;
 }
+
 .nav-link {
   @include navbar-links;
 }
+
 .navbar-nav {
   @include all-center(column);
   @include navbar-deli;
   @include navbar-reserv;
+
   .shopping-bag {
     img {
       height: 30px;
       width: 30px;
     }
+
     .shopping-bag-container {
       display: none;
-      height:350px;
+      height: 350px;
       width: 450px;
       background-color: rgb(255, 255, 255);
       position: absolute;
       right: 10px;
       overflow: hidden;
     }
+
     &:hover {
       .shopping-bag-container {
         display: block;
@@ -130,15 +139,18 @@ nav {
   min-height: 100vh;
   background-image: url('../assets/img/albert-YYZU0Lo1uXE-unsplash.jpg');
   @include bg-pic-config(scroll);
+
   .i-header-c {
     display: flex;
     flex-direction: column;
     justify-content: center;
     @include header-mquery;
   }
+
   .index-header-title {
     @include index-header-title
   }
+
   .index-cta {
     @include index-cta;
   }
@@ -151,31 +163,39 @@ main {
       @include icons-info;
       @include i-main-info;
     }
+
     .info-bar-pic {
       height: 50vh;
       background-image: url('../assets/img/albert-uP8Xnw5XRB0-unsplash.jpg');
       @include bg-pic-config(fixed);
     }
   }
+
   .quienes-somos {
     height: fit-content;
     min-height: 100vh;
+
     h1 {
       margin: 20px 0;
       @include i-main-qs-h1
     }
+
     .quienes-somos-content {
       @include quienes-somos-content;
     }
   }
+
   .contactanos {
     height: fit-content;
     min-height: 100vh;
     background-image: url('../assets/img/albert-1v72w9EhcWQ-unsplash.jpg');
-    @media screen and (max-width: 64em){
+
+    @media screen and (max-width: 64em) {
       height: 200vh;
     }
+
     @include bg-pic-config(fixed);
+
     .contactanos-bg-filter {
       @include contactanos-bg-filter;
     }
@@ -198,6 +218,7 @@ footer {
 .m-index-row {
   @include m-index-row;
 }
+
 .mi-row {
   @include mi-row;
 }
@@ -208,9 +229,11 @@ footer {
 .cart-header {
   @include cart-header
 }
+
 .cart-main-container {
   @include cart-main-container;
 }
+
 #cmc-menu {
   display: none !important;
   visibility: hidden !important;
@@ -220,6 +243,7 @@ footer {
 #container-productos {
   @include container-productos;
 }
+
 .product-grid {
   @include product-grid;
 }
@@ -227,17 +251,20 @@ footer {
 .lista-de-ingredientes-title {
   color: $clr-main-dark;
 }
-.vermas-alert-content *{
+
+.vermas-alert-content * {
   color: $clr-main-dark;
 }
+
 .alert-carrito-btn {
   background-color: white !important;
-  color: $clr-main-dark !important;
-  border: 2px solid $clr-main-dark !important;
-  font-family: $ff-body !important;
+  color: $clr-main-dark  !important;
+  border: 2px solid $clr-main-dark  !important;
+  font-family: $ff-body  !important;
   font-weight: 500 !important;
+
   &:hover {
-    background-color: $clr-main-dark !important;
+    background-color: $clr-main-dark  !important;
     color: white !important;
   }
 }
@@ -245,12 +272,14 @@ footer {
 .pay-btn-container {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin-bottom: 15px;
+
   .pay-btn {
     text-transform: uppercase;
     background-color: $clr-main-dark;
     color: white;
+
     &:hover {
       background-color: white;
       color: $clr-main-dark;
@@ -261,13 +290,16 @@ footer {
 
 .payment-container {
   margin-top: 80px;
+
   form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     .form-payment-container {
       display: flex;
+
       div {
         display: flex;
         flex-direction: column;
@@ -276,12 +308,14 @@ footer {
         margin-bottom: 5px;
       }
     }
+
     label {
       color: $clr-main-dark;
       text-transform: uppercase;
       font-family: $ff-body;
       font-weight: 600;
     }
+
     input {
       margin-bottom: 5px;
     }
@@ -291,4 +325,3 @@ footer {
 //  * {
 //   outline: 1px solid red;
 // }
-

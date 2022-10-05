@@ -1,987 +1,1020 @@
 let productos = [
 
-    {id: 0,
-    
-    cantidad: 1,
+    {
+        id: 0,
 
-    categoria: 'entrada',
+        cantidad: 1,
 
-    nombre: 'entrada fría',
+        categoria: 'entrada',
 
-    img: '../assets/menu/1entradas/entradaFria-min.jpg',
+        nombre: 'entrada fría',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/1entradas/entradaFria-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png',  
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 4200, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 4200,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    ingredientes: 'Queso provolone,Frutas varias, Chorizo, Galletitas condimentadas',
-    
-    },
+        oveg: 'SI',
 
-    {id: 1,
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
 
-    cantidad: 1,
-
-    categoria: 'entrada',
-
-    nombre: 'corn deluxe',
-
-    img: '../assets/menu/1entradas/cornDeluxe-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire-empty.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png',
-
-    precio: 2100, 
-
-    oveg: 'SI', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: 'order-lg-1',
-
-    ingredientes: 'Choclo, Cebollas tricolor, Granada, Queso',
-    },
-
-    {id: 2,
-
-    cantidad: 1,
-
-    categoria: 'entrada',
-
-    nombre: 'rabas',
-
-    img: '../assets/menu/1entradas/rabas-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
-
-    precio: 3400, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: '',
-
-    ingredientes: 'Rabas, Panco, Lechuga, Salsa barbacoa, Limón',
-    },
-
-    {id: 3,
-        
-    cantidad: 1,
-
-    categoria: 'entrada',
-
-    nombre: 'tabla de quesos',
-
-    img: '../assets/menu/1entradas/tablaDeQuesos-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png',  
-
-    precio: 3600, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-    
-    orientacion: 'order-lg-1',
-
-    ingredientes: 'Quesos varios, Tomates cherris, Aceitunas negras y verdes, Frutos secos, Jamón crudo, Miel',
-
-    }, 
-
-    {id: 4,
-
-    cantidad: 1,
-
-    categoria: 'ensalada',
-    
-    nombre: 'premium salad',
-
-    img: '../assets/menu/2ensaladas/ensaladaPremium-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png',  
-
-    precio: 2900, 
-
-    oveg: 'SI', 
-
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    ingredientes: 'Salmon, Tomates, Lechuga, Choclo, Pepino, Porotos',
-
-    },
-    
-    {id: 5,
-
-    cantidad: 1,
-
-    categoria: 'ensalada',
-        
-    nombre: 'fresh salad',
-
-    img: '../assets/menu/2ensaladas/freshSalad-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
-
-    precio: 2100, 
-
-    oveg: 'SI', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-
-    orientacion: 'order-lg-1',
-
-    ingredientes: 'Palta, Tomate y lechuga, Repollo, Garbanzos, Batata zanahoria',
+        ingredientes: 'Queso provolone,Frutas varias, Chorizo, Galletitas condimentadas',
 
     },
 
-    {id: 6,
+    {
+        id: 1,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'ensalada',
-        
-    nombre: 'sea salad',
+        categoria: 'entrada',
 
-    img: '../assets/menu/2ensaladas/seaSalad-min.jpg',
+        nombre: 'corn deluxe',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
+        img: '../assets/menu/1entradas/cornDeluxe-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 2100, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire-empty.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+        precio: 2100,
 
-    orientacion: 'order-lg-1',
+        oveg: 'SI',
 
-    ingredientes: 'Langostinos, Tomates cherry, Lechuga, Queso',
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: 'order-lg-1',
+
+        ingredientes: 'Choclo, Cebollas tricolor, Granada, Queso',
+    },
+
+    {
+        id: 2,
+
+        cantidad: 1,
+
+        categoria: 'entrada',
+
+        nombre: 'rabas',
+
+        img: '../assets/menu/1entradas/rabas-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
+
+        precio: 3400,
+
+        oveg: 'NO',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Rabas, Panco, Lechuga, Salsa barbacoa, Limón',
+    },
+
+    {
+        id: 3,
+
+        cantidad: 1,
+
+        categoria: 'entrada',
+
+        nombre: 'tabla de quesos',
+
+        img: '../assets/menu/1entradas/tablaDeQuesos-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
+
+        precio: 3600,
+
+        oveg: 'NO',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: 'order-lg-1',
+
+        ingredientes: 'Quesos varios, Tomates cherris, Aceitunas negras y verdes, Frutos secos, Jamón crudo, Miel',
 
     },
 
-    {id: 7,
+    {
+        id: 4,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'ensalada',
-        
-    nombre: 'fruit salad',
+        categoria: 'ensalada',
 
-    img: '../assets/menu/2ensaladas/fruitSalad-min.jpg',
+        nombre: 'premium salad',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
+        img: '../assets/menu/2ensaladas/ensaladaPremium-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1950, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+        precio: 2900,
 
-    orientacion: 'order-lg-1',
+        oveg: 'SI',
 
-    ingredientes: 'Frutos del bosque, Mango, Pera, Manzana, Banana, Kiwi, Mandarina, Naranja, Chocolate, Granada',
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
 
-    },
-
-    {id: 8,
-
-    cantidad: 1,
-
-    categoria: 'carne',
-
-    nombre: 'tomahawk',
-    
-    img: '../assets/menu/3platosPrincipales/carnesRojas/tomaHawk-min.jpg',
-    
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-    
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png',  
-    
-    precio: 4200, 
-    
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-    
-    orientacion: '',
-
-    ingredientes: 'Carne corte tomahawk, Batatas fritas, Romero',
-        
-    },
-    
-    {id: 9,
-
-    cantidad: 1,
-
-    categoria: 'carne',
-        
-    nombre: 'costillar de cerdo',
-
-    img: '../assets/menu/3platosPrincipales/carnesRojas/pechitoDeCerdo-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
-
-    precio: 3800, 
-
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.', 
-    
-    orientacion: 'order-lg-1',
-
-    ingredientes: 'Costillar de cerdo, Salsa barbacoa, Tomates, Pickles, Hongo relleno, Papas fritas',
+        ingredientes: 'Salmon, Tomates, Lechuga, Choclo, Pepino, Porotos',
 
     },
 
-    {id: 10,
+    {
+        id: 5,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'carne',
+        categoria: 'ensalada',
 
-    nombre: 'entraña con papas',
+        nombre: 'fresh salad',
 
-    img: '../assets/menu/3platosPrincipales/carnesRojas/carneConPapas-min.jpg',
+        img: '../assets/menu/2ensaladas/freshSalad-min.jpg',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png',  
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    precio: 4000, 
+        precio: 2100,
 
-    oveg: 'NO', 
-    
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+        oveg: 'SI',
 
-    orientacion: '',
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
 
-    ingredientes: 'Entraña de ternera, Papas fritas, Cilantro',
-    
+        orientacion: 'order-lg-1',
+
+        ingredientes: 'Palta, Tomate y lechuga, Repollo, Garbanzos, Batata zanahoria',
+
     },
 
-    {id: 11,
+    {
+        id: 6,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'carne',
-        
-    nombre: 'brochetas de carne',
+        categoria: 'ensalada',
 
-    img: '../assets/menu/3platosPrincipales/carnesRojas/brochetasDeCarne-min.jpg',
+        nombre: 'sea salad',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/2ensaladas/seaSalad-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 5400, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'NO', 
+        precio: 2100,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Mix de carnes asadas, Berenjenas asadas, Morrones asados, Papas asadas, Hongos asados, Salsas varias, Pan integral casero',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: 'order-lg-1',
+
+        ingredientes: 'Langostinos, Tomates cherry, Lechuga, Queso',
+
     },
 
-    {id: 12,
+    {
+        id: 7,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pescado',
-        
-    nombre: 'salmon',
+        categoria: 'ensalada',
 
-    img: '../assets/menu/3platosPrincipales/pescados/salmonAlHorno-min.jpg',
+        nombre: 'fruit salad',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/2ensaladas/fruitSalad-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 8400, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'NO', 
+        precio: 1950,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Salmon fresco, Lima, Zanahoria, Espinaca',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: 'order-lg-1',
+
+        ingredientes: 'Frutos del bosque, Mango, Pera, Manzana, Banana, Kiwi, Mandarina, Naranja, Chocolate, Granada',
+
     },
 
-    {id: 13,
+    {
+        id: 8,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pescado',
-        
-    nombre: 'atún',
+        categoria: 'carne',
 
-    img: '../assets/menu/3platosPrincipales/pescados/tuna-min.jpg',
+        nombre: 'tomahawk',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/carnesRojas/tomaHawk-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 7500, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    oveg: 'NO', 
+        precio: 4200,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Atún fresco, Limón, Wasabi, Espinaca, Cilantro',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Carne corte tomahawk, Batatas fritas, Romero',
+
     },
 
-    {id: 14,
+    {
+        id: 9,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pescado',
-        
-    nombre: 'sushi',
+        categoria: 'carne',
 
-    img: '../assets/menu/3platosPrincipales/pescados/sushi-min.jpg',
+        nombre: 'costillar de cerdo',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/carnesRojas/pechitoDeCerdo-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 10500, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'NO', 
+        precio: 3800,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Variedad de pescados, Palta, Kanikama, Wasabi, Queso finlandia, Zanahoria',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: 'order-lg-1',
+
+        ingredientes: 'Costillar de cerdo, Salsa barbacoa, Tomates, Pickles, Hongo relleno, Papas fritas',
+
     },
 
-    {id: 15,
+    {
+        id: 10,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pescado',
-        
-    nombre: 'oshizushi',
+        categoria: 'carne',
 
-    img: '../assets/menu/3platosPrincipales/pescados/oshizushi-min.jpg',
+        nombre: 'entraña con papas',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/carnesRojas/carneConPapas-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 9100, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'NO', 
+        precio: 4000,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Variedad de pescados, Palta, Kanikama, Wasabi, Queso finlandia, Langostinos',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Entraña de ternera, Papas fritas, Cilantro',
+
     },
 
-    {id: 16,
+    {
+        id: 11,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pasta',
-        
-    nombre: 'chinese wok',
+        categoria: 'carne',
 
-    img: '../assets/menu/3platosPrincipales/pastas/chineseWok-min.jpg',
+        nombre: 'brochetas de carne',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/carnesRojas/brochetasDeCarne-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 4500, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    oveg: 'SI', 
+        precio: 5400,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Spaghetti, Carne de res, Morrones, Repollitos de brucelas, Hongos, Zanahoria, Choclo, Arbejas',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Mix de carnes asadas, Berenjenas asadas, Morrones asados, Papas asadas, Hongos asados, Salsas varias, Pan integral casero',
+
     },
 
-    {id: 17,
+    {
+        id: 12,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pasta',
-        
-    nombre: 'sea wok',
+        categoria: 'pescado',
 
-    img: '../assets/menu/3platosPrincipales/pastas/seaWok-min.jpg',
+        nombre: 'salmon',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pescados/salmonAlHorno-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 4800, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    oveg: 'NO', 
+        precio: 8400,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Spaghetti, Salsa de tomates, Tomates cherry, Langostinos, Puerro, Carne de res',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Salmon fresco, Lima, Zanahoria, Espinaca',
+
     },
 
-    {id: 18,
+    {
+        id: 13,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'pasta',
-        
-    nombre: 'pappardelle',
+        categoria: 'pescado',
 
-    img: '../assets/menu/3platosPrincipales/pastas/pappardelle-min.jpg',
+        nombre: 'atún',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pescados/tuna-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire-empty.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 3200, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    oveg: 'SI', 
+        precio: 7500,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Pappardelle, Salsa de tomates, Carne de res picada',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Atún fresco, Limón, Wasabi, Espinaca, Cilantro',
+
     },
 
-    {id: 19,
+    {
+        id: 14,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'spagetti',
-        
-    nombre: 'spaghetti',
+        categoria: 'pescado',
 
-    img: '../assets/menu/3platosPrincipales/pastas/spaghetti-min.jpg',
+        nombre: 'sushi',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pescados/sushi-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire-empty.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 2200, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    oveg: 'SI', 
+        precio: 10500,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Spaghetti, Salsa de tomates, Tomates cherry, Queso',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Variedad de pescados, Palta, Kanikama, Wasabi, Queso finlandia, Zanahoria',
+
     },
 
-    {id: 20,
+    {
+        id: 15,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'extra',
-        
-    nombre: 'pure de papas',
+        categoria: 'pescado',
 
-    img: '../assets/menu/4extras/pureDePapa-min.jpg',
+        nombre: 'oshizushi',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pescados/oshizushi-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire-empty.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 950, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    oveg: 'SI', 
+        precio: 9100,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Papa, Leche, Queso, Manteca',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Variedad de pescados, Palta, Kanikama, Wasabi, Queso finlandia, Langostinos',
+
     },
 
-    {id: 21,
+    {
+        id: 16,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'extra',
-        
-    nombre: 'papas fritas',
+        categoria: 'pasta',
 
-    img: '../assets/menu/4extras/papasFritas-min.jpg',
+        nombre: 'chinese wok',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pastas/chineseWok-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1200, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 4500,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Papas, Sal',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Spaghetti, Carne de res, Morrones, Repollitos de brucelas, Hongos, Zanahoria, Choclo, Arbejas',
+
     },
 
-    {id: 22,
+    {
+        id: 17,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'extra',
-        
-    nombre: 'tabla de salsas',
+        categoria: 'pasta',
 
-    img: '../assets/menu/4extras/mixDeSalsas-min.jpg',
+        nombre: 'sea wok',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pastas/seaWok-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1400, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 4800,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'NO',
 
-    ingredientes: 'Salsas varias',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Spaghetti, Salsa de tomates, Tomates cherry, Langostinos, Puerro, Carne de res',
+
     },
 
-    {id: 23,
+    {
+        id: 18,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'extra',
-        
-    nombre: 'alioli',
+        categoria: 'pasta',
 
-    img: '../assets/menu/4extras/alioli-min.jpg',
+        nombre: 'pappardelle',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pastas/pappardelle-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 700, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire-empty.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 3200,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Huevo, Aceite de oliva, Ajo, Limón',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Pappardelle, Salsa de tomates, Carne de res picada',
+
     },
 
-    {id: 24,
+    {
+        id: 19,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'postre',
-        
-    nombre: 'waffle con helado',
+        categoria: 'spagetti',
 
-    img: '../assets/menu/5postres/waffleConHelado-min.jpg',
+        nombre: 'spaghetti',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/3platosPrincipales/pastas/spaghetti-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1100, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire-empty.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 2200,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Waffle, Frutos rojos, Helado de crema',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Spaghetti, Salsa de tomates, Tomates cherry, Queso',
+
     },
 
-    {id: 25,
+    {
+        id: 20,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'postre',
-        
-    nombre: 'crepe de frutilla',
+        categoria: 'extra',
 
-    img: '../assets/menu/5postres/crepeDeFrutilla-min.jpg',
+        nombre: 'pure de papas',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/4extras/pureDePapa-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1400, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire-empty.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 950,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Crepe, Frutillas, Miel, Crema americana',
-    
-    },
-    
-    {id: 26,
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
 
-    cantidad: 1,
+        orientacion: '',
 
-    categoria: 'postre',
-        
-    nombre: 'brownie con helado',
+        ingredientes: 'Papa, Leche, Queso, Manteca',
 
-    img: '../assets/menu/5postres/brownieConHelado-min.jpg',
-
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
-
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
-
-    precio: 1300, 
-
-    oveg: 'SI', 
-
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
-
-    ingredientes: 'Brownie, Helado de crema, Salsa de dulce de leche y caramelo',
-    
     },
 
-    {id: 27,
+    {
+        id: 21,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'postre',
-        
-    nombre: 'copa oreo',
+        categoria: 'extra',
 
-    img: '../assets/menu/5postres/copaOreo-min.jpg',
+        nombre: 'papas fritas',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/4extras/papasFritas-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1000, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 1200,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Oreos, Caramelo, Dulce de leche, Chocolate, Crema americana, Helado de vainilla',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Papas, Sal',
+
     },
 
-    {id: 28,
+    {
+        id: 22,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'postre',
-        
-    nombre: 'volcán de chocolate',
+        categoria: 'extra',
 
-    img: '../assets/menu/5postres/volcanDeChocolate-min.jpg',
+        nombre: 'tabla de salsas',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/4extras/mixDeSalsas-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire-empty.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1500, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 1400,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Chocolate, manteca, Salsa de caramelo',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Salsas varias',
+
     },
 
-    {id: 29,
+    {
+        id: 23,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'postre',
-        
-    nombre: 'lime pie',
+        categoria: 'extra',
 
-    img: '../assets/menu/5postres/limePie-min.jpg',
+        nombre: 'alioli',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/4extras/alioli-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 1900, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: 'SI', 
+        precio: 700,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        oveg: 'SI',
 
-    ingredientes: 'Lima, Manteca, Crema, Masa de galletitas, Arandanos',
-    
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Huevo, Aceite de oliva, Ajo, Limón',
+
+    },
+
+    {
+        id: 24,
+
+        cantidad: 1,
+
+        categoria: 'postre',
+
+        nombre: 'waffle con helado',
+
+        img: '../assets/menu/5postres/waffleConHelado-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
+
+        precio: 1100,
+
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Waffle, Frutos rojos, Helado de crema',
+
+    },
+
+    {
+        id: 25,
+
+        cantidad: 1,
+
+        categoria: 'postre',
+
+        nombre: 'crepe de frutilla',
+
+        img: '../assets/menu/5postres/crepeDeFrutilla-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
+
+        precio: 1400,
+
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Crepe, Frutillas, Miel, Crema americana',
+
+    },
+
+    {
+        id: 26,
+
+        cantidad: 1,
+
+        categoria: 'postre',
+
+        nombre: 'brownie con helado',
+
+        img: '../assets/menu/5postres/brownieConHelado-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
+
+        precio: 1300,
+
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Brownie, Helado de crema, Salsa de dulce de leche y caramelo',
+
+    },
+
+    {
+        id: 27,
+
+        cantidad: 1,
+
+        categoria: 'postre',
+
+        nombre: 'copa oreo',
+
+        img: '../assets/menu/5postres/copaOreo-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
+
+        precio: 1000,
+
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Oreos, Caramelo, Dulce de leche, Chocolate, Crema americana, Helado de vainilla',
+
+    },
+
+    {
+        id: 28,
+
+        cantidad: 1,
+
+        categoria: 'postre',
+
+        nombre: 'volcán de chocolate',
+
+        img: '../assets/menu/5postres/volcanDeChocolate-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire-empty.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
+
+        precio: 1500,
+
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Chocolate, manteca, Salsa de caramelo',
+
+    },
+
+    {
+        id: 29,
+
+        cantidad: 1,
+
+        categoria: 'postre',
+
+        nombre: 'lime pie',
+
+        img: '../assets/menu/5postres/limePie-min.jpg',
+
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
+
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
+
+        precio: 1900,
+
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Lima, Manteca, Crema, Masa de galletitas, Arandanos',
+
     },
 
 
-    {id: 30,
-    
-    cantidad: 1,
+    {
+        id: 30,
 
-    categoria: 'postre',
-        
-    nombre: 'cheese cake',
+        cantidad: 1,
 
-    img: '../assets/menu/5postres/cheeseCake-min.jpg',
+        categoria: 'postre',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        nombre: 'cheese cake',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire.png', 
+        img: '../assets/menu/5postres/cheeseCake-min.jpg',
 
-    precio: 2100, 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    oveg: 'SI', 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire.png',
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        precio: 2100,
 
-    ingredientes: 'Crema de queso, Masa de galletitas, Mermelada de frutos rojos',
-    
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Crema de queso, Masa de galletitas, Mermelada de frutos rojos',
+
     },
 
-    {id: 31,
+    {
+        id: 31,
 
-    cantidad: 1,
-    
-    categoria: 'postre',
-        
-    nombre: 'caramel cake',
+        cantidad: 1,
 
-    img: '../assets/menu/5postres/caramelCake-min.jpg',
+        categoria: 'postre',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        nombre: 'caramel cake',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        img: '../assets/menu/5postres/caramelCake-min.jpg',
 
-    precio: 1800, 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    oveg: 'SI', 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
-    
-    orientacion: '',
+        precio: 1800,
 
-    ingredientes: 'Crema, Masa Humeda, Chocolate, Caramelo, Cerezas',
-    
+        oveg: 'SI',
+
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+
+        orientacion: '',
+
+        ingredientes: 'Crema, Masa Humeda, Chocolate, Caramelo, Cerezas',
+
     },
 
-    {id: 32,
+    {
+        id: 32,
 
-    cantidad: 1,
+        cantidad: 1,
 
-    categoria: 'vino',
-        
-    nombre: 'Rateau Oraters Malbec',
+        categoria: 'vino',
 
-    img: '../assets/menu/6vinos/rateauOraters6-25-min.jpg',
+        nombre: 'Rateau Oraters Malbec',
 
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',  
+        img: '../assets/menu/6vinos/rateauOraters6-25-min.jpg',
 
-    fire1: '../assets/icons/menu/fire.png',
-    fire2: '../assets/icons/menu/fire.png', 
-    fire3: '../assets/icons/menu/fire.png', 
-    fire4: '../assets/icons/menu/fire.png', 
-    fire5: '../assets/icons/menu/fire-empty.png', 
+        descripcion: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices.',
 
-    precio: 8970, 
+        fire1: '../assets/icons/menu/fire.png',
+        fire2: '../assets/icons/menu/fire.png',
+        fire3: '../assets/icons/menu/fire.png',
+        fire4: '../assets/icons/menu/fire.png',
+        fire5: '../assets/icons/menu/fire-empty.png',
 
-    oveg: '-', 
+        precio: 8970,
 
-    condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
+        oveg: '-',
 
-    orientacion: '',
+        condimentos: 'Condimentos: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit eu odio nec gravida. Vestibulum vel cursus enim.',
 
-    ingredientes: 'Crema, Masa Humeda, Chocolate, Caramelo, Cerezas',
+        orientacion: '',
+
+        ingredientes: 'Crema, Masa Humeda, Chocolate, Caramelo, Cerezas',
 
     },
 

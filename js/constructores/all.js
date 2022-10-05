@@ -3,35 +3,67 @@ import { productos } from "../objects/objects.js"
 // PRODUCTOS ↓ ↓ ↓ 
 const buildProductos = () => {
     let contenedor = document.getElementById("container-productos");
-    productos.forEach((producto, productoIndex) => {
-        let section = document.createElement("div");
-        section.classList.add("col-xl-3", "col-lg-4", "col-md-6", "gx-0", "text-center", "product-grid");
-        section.idName
-        section.innerHTML = `
-        <div class="card" style="width: 18rem;" id="${producto.categoria}">
-            <img src="${producto.img}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title mi-desc-title">${producto.nombre}</h5>
-                <div class="detail-calific">
-                    <h5>Calificación:</h5>
-                    <div class="detail-calific-img">
-                        <img src="${producto.fire1}">
-                        <img src="${producto.fire2}">
-                        <img src="${producto.fire3}">
-                        <img src="${producto.fire4}">
-                        <img src="${producto.fire5}">
+    fetch('../js/objects/objects.json')
+        .then((res) => res.json())
+        .then((array) => {
+            array.forEach((producto, productoIndex) => {
+                const section = document.createElement("div");
+                section.classList.add("col-xl-3", "col-lg-4", "col-md-6", "gx-0", "text-center", "product-grid");
+                section.idName
+                section.innerHTML = `
+                <div class="card" style="width: 18rem;" id="${producto.categoria}">
+                    <img src="${producto.img}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title mi-desc-title">${producto.nombre}</h5>
+                        <div class="detail-calific">
+                            <h5>Calificación:</h5>
+                            <div class="detail-calific-img">
+                                <img src="${producto.fire1}">
+                                <img src="${producto.fire2}">
+                                <img src="${producto.fire3}">
+                                <img src="${producto.fire4}">
+                                <img src="${producto.fire5}">
+                            </div>
+                        </div>
+                        <h5 class="details-pds" >Precio: $${producto.precio}</h5>     
+                        <button class='btn aa-carrito-btn' onClick="addToCart(${productoIndex})">Añadir al carrito</button><br>
+                        <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
+                        <a href="#indice">Ir al indice</a>
                     </div>
                 </div>
-                <h5 class="details-pds" >Precio: $${producto.precio}</h5>     
-                <button class='btn aa-carrito-btn' onClick="addToCart(${productoIndex})">Añadir al carrito</button><br>
-                <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
-                <a href="#indice">Ir al indice</a>
+                `;
+                contenedor.appendChild(section)
+            })
+        })
+    /*     productos.forEach((producto, productoIndex) => {
+            let section = document.createElement("div");
+            section.classList.add("col-xl-3", "col-lg-4", "col-md-6", "gx-0", "text-center", "product-grid");
+            section.idName
+            section.innerHTML = `
+            <div class="card" style="width: 18rem;" id="${producto.categoria}">
+                <img src="${producto.img}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title mi-desc-title">${producto.nombre}</h5>
+                    <div class="detail-calific">
+                        <h5>Calificación:</h5>
+                        <div class="detail-calific-img">
+                            <img src="${producto.fire1}">
+                            <img src="${producto.fire2}">
+                            <img src="${producto.fire3}">
+                            <img src="${producto.fire4}">
+                            <img src="${producto.fire5}">
+                        </div>
+                    </div>
+                    <h5 class="details-pds" >Precio: $${producto.precio}</h5>     
+                    <button class='btn aa-carrito-btn' onClick="addToCart(${productoIndex})">Añadir al carrito</button><br>
+                    <button class='btn btn-vermas' onClick="vermas('${producto.descripcion}', '${producto.condimentos}', '${producto.ingredientes}', ${productoIndex})">Ver más</button><br>
+                    <a href="#indice">Ir al indice</a>
+                </div>
             </div>
-        </div>
-        `;
-        contenedor.appendChild(section)
-        
-    })
+            `;
+            contenedor.appendChild(section)
+            
+        }) */
 };
 
 // VER MAS ↓ ↓ ↓
@@ -39,7 +71,7 @@ window.vermas = (descripcion, condimentos, ingredientes, productoIndex) => {
     Swal.fire({
         title: '<strong class="lista-de-ingredientes-title">Lista de <u>ingredientes principales</u>:</strong>',
         icon: 'info',
-        html:`
+        html: `
         <div class="vermas-alert-content">
             <p>
                 ${ingredientes}.
@@ -58,15 +90,15 @@ window.vermas = (descripcion, condimentos, ingredientes, productoIndex) => {
         showCancelButton: false,
         focusConfirm: false,
         confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Aceptar',
-      })
+            '<i class="fa fa-thumbs-up"></i> Aceptar',
+    })
 }
 
 // CONTRUCTOR DE CARRITO DE PRODUCTOS ↓ ↓ ↓ 
 const buildProductosCart = () => {
     modalCarritoProducto2.innerHTML = '';
     if (cartProducto.length > 0) {
-        cartProducto.forEach ((producto, productoIndex) => {
+        cartProducto.forEach((producto, productoIndex) => {
             const carritoContainer = document.createElement('div');
             carritoContainer.classList.add('row', 'cart-row')
             carritoContainer.innerHTML = `
@@ -84,8 +116,8 @@ const buildProductosCart = () => {
         });
         const totalAcumulado = document.getElementById("totalAcumulado");
         totalAcumulado.innerText = cartProducto
-          .map((item) => item.precio * item.cantidad)
-          .reduce((prev, current) => prev + current, totalProductos);
+            .map((item) => item.precio * item.cantidad)
+            .reduce((prev, current) => prev + current, totalProductos);
         const btnApay = document.querySelector('#btn-a-pay');
         btnApay.classList.add('nav-link');
     } else {
@@ -112,20 +144,20 @@ window.addToCart = (productoId) => {
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
-          })
-          
-          Toast.fire({
+        })
+
+        Toast.fire({
             icon: 'success',
             title: 'Producto agregado al carrito!'
-          })
+        })
 
         actualizarStorage(cartProducto);
         buildProductosCart();
-    }else {
-        cartProducto[productIdFinded].cantidad ++;
+    } else {
+        cartProducto[productIdFinded].cantidad++;
 
         const Toast = Swal.mixin({
             toast: true,
@@ -134,15 +166,15 @@ window.addToCart = (productoId) => {
             timer: 3000,
             timerProgressBar: true,
             didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
-          })
-          
-          Toast.fire({
+        })
+
+        Toast.fire({
             icon: 'success',
             title: 'Producto agregado al carrito!'
-          })
+        })
 
         actualizarStorage(cartProducto);
         buildProductosCart();
@@ -151,12 +183,12 @@ window.addToCart = (productoId) => {
 
 // ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
 window.removeProducto = (productoIndex) => {
-    cartProducto.splice(productoIndex,1);
+    cartProducto.splice(productoIndex, 1);
     const totalAcumulado = document.getElementById("totalAcumulado");
     totalAcumulado.innerText = cartProducto
         .map((item) => item.precio * item.cantidad)
         .reduce((prev, current) => prev - current, totalProductos);
-        localStorage.setItem("cartProducto", JSON.stringify(cartProducto));
+    localStorage.setItem("cartProducto", JSON.stringify(cartProducto));
     actualizarStorage(cartProducto);
     buildProductosCart();
     const Toast = Swal.mixin({
@@ -166,16 +198,16 @@ window.removeProducto = (productoIndex) => {
         timer: 3000,
         timerProgressBar: true,
         didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
-      
-      Toast.fire({
+    })
+
+    Toast.fire({
         icon: 'warning',
         title: `Producto eliminado!`
-      })
-      buildProductosCart();
+    })
+    buildProductosCart();
 
 }
 
@@ -185,7 +217,7 @@ window.pagar = () => {
         title: '<strong>Un paso mas!</strong>',
         icon: 'info',
         html:
-        'Completa la siguiente informacion para pagar!',
+            'Completa la siguiente informacion para pagar!',
         html: `<div class="payment-container">
         <form action="post">
             <div class="form-payment-container">
@@ -219,18 +251,18 @@ window.pagar = () => {
         showCancelButton: false,
         focusConfirm: false,
         confirmButtonText:
-        `Pagar`,
+            `Pagar`,
         confirmButtonAriaLabel: 'Thumbs up, great!',
         cancelButtonText:
-        '<i class="fa fa-thumbs-down"></i>',
+            '<i class="fa fa-thumbs-down"></i>',
         cancelButtonAriaLabel: 'Thumbs down'
     });
     cartProducto.length != 0 ? cartProducto.length = 0 : null;
     const totalAcumulado = document.getElementById("totalAcumulado");
     totalAcumulado.innerText = cartProducto
-      .map((item) => item.precio * item.cantidad * 0)
-      .reduce((prev, current) => prev + current, totalProductos);
-    
+        .map((item) => item.precio * item.cantidad * 0)
+        .reduce((prev, current) => prev + current, totalProductos);
+
     actualizarStorage(cartProducto);
     buildProductosCart();
 }
