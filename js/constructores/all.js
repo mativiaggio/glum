@@ -1,5 +1,3 @@
-import { productos } from "../objects/objects.js"
-
 // PRODUCTOS ↓ ↓ ↓ 
 const buildProductos = () => {
     let contenedor = document.getElementById("container-productos");
@@ -107,7 +105,11 @@ const buildProductosCart = () => {
                 </div>
                 <div class="col-lg-2 col-md-6 cart-name"><p>${producto.nombre}</p></div>
                 <div class="col-lg-2 col-md-6 cart-price"><p>$${producto.precio}</p></div>
-                <div class="col-lg-2 col-md-6 cart-quant"><p>(${producto.cantidad})</p></div>
+                <div class="col-lg-2 col-md-6 cart-quant d-flex">
+                    <button>-</button>
+                    <p>(${producto.cantidad})</p>
+                    <button onClick="addOneMore(${productoIndex})">+</button>
+                </div>
                 <div class="col-lg-2 col-md-6 cart-total-price">$${producto.precio * producto.cantidad}</div>
                 <div class="col-lg-2 col-md-6 cart-delete"><button class="btn cart-delete-btn" onClick="removeProducto(${productoIndex})">eliminar</button></div>
             `;
@@ -129,58 +131,64 @@ const buildProductosCart = () => {
 
 // AÑADIR A CARRITO
 window.addToCart = (productoId) => {
-    const productIdFinded = cartProducto.findIndex((elemento) => {
-        return elemento.id === productos[productoId].id;
-    });
-    if (productIdFinded === -1) {
-        const productoAgregar = productos[productoId];
-        productoAgregar.cantidad = 1;
-        cartProducto.push(productoAgregar);
-
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'bottom-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
+    fetch('../js/objects/objects.json')
+        .then((res) => res.json())
+        .then((array) => {
+            const productIdFinded = cartProducto.findIndex((elemento) => {
+                return elemento.id === array[productoId].id;
+            });
+            if (productIdFinded === -1) {
+                const productoAgregar = array[productoId];
+                productoAgregar.cantidad = 1;
+                cartProducto.push(productoAgregar);
+        
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'bottom-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+        
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Producto agregado al carrito!'
+                })
+        
+                actualizarStorage(cartProducto);
+                buildProductosCart();
+            } else {
+                cartProducto[productIdFinded].cantidad++;
+        
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'bottom-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+        
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Producto agregado al carrito!'
+                })
+        
+                actualizarStorage(cartProducto);
+                buildProductosCart();
             }
         })
-
-        Toast.fire({
-            icon: 'success',
-            title: 'Producto agregado al carrito!'
-        })
-
-        actualizarStorage(cartProducto);
-        buildProductosCart();
-    } else {
-        cartProducto[productIdFinded].cantidad++;
-
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'bottom-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        })
-
-        Toast.fire({
-            icon: 'success',
-            title: 'Producto agregado al carrito!'
-        })
-
-        actualizarStorage(cartProducto);
-        buildProductosCart();
-    }
 };
-
+window.addOneMore = (productoId) => {
+    console.log(productos[productoId].cantidad)
+}
 // ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
 window.removeProducto = (productoIndex) => {
     cartProducto.splice(productoIndex, 1);

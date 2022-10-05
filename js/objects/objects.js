@@ -1,3 +1,4 @@
+// ANTIGUO ARRAY DE OBJETOS
 let productos = [
 
     {
