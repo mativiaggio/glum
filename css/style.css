@@ -235,21 +235,14 @@ nav #navbarSupportedContent {
     margin-top: 20px !important;
   }
 }
+.navbar-nav .shopping-bag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navbar-nav .shopping-bag img {
   height: 30px;
   width: 30px;
-}
-.navbar-nav .shopping-bag .shopping-bag-container {
-  display: none;
-  height: 350px;
-  width: 450px;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  right: 10px;
-  overflow: hidden;
-}
-.navbar-nav .shopping-bag:hover .shopping-bag-container {
-  display: block;
 }
 
 .index-header {
