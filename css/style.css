@@ -1224,6 +1224,7 @@ footer .footer-navbar p {
 
 .thanks {
   height: 100vh;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
