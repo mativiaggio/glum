@@ -187,12 +187,14 @@ window.addToCart = (productoId) => {
         })
 };
 
+// AGREGAR UNA UNIDAD
 window.addOneMore = (productoIndex) => {
     cartProducto[productoIndex].cantidad ++;
     actualizarStorage(cartProducto);
     buildProductosCart();
 }
 
+// ELIMINAR UNA UNIDAD
 window.removeOne = (productoIndex) => {
     while (cartProducto[productoIndex].cantidad > 1) {
         cartProducto[productoIndex].cantidad --;
@@ -201,6 +203,7 @@ window.removeOne = (productoIndex) => {
         break;
     }
 }
+
 // ELIMINAR ITEM DE CARRITO ↓ ↓ ↓ 
 window.removeProducto = (productoIndex) => {
     cartProducto.splice(productoIndex, 1);
@@ -231,58 +234,10 @@ window.removeProducto = (productoIndex) => {
 
 }
 
+// PAGAR
 window.pagar = () => {
-
-    Swal.fire({
-        title: '<strong>Un paso mas!</strong>',
-        icon: 'info',
-        html:
-            'Completa la siguiente informacion para pagar!',
-        html: `<div class="payment-container">
-        <form action="post">
-            <div class="form-payment-container">
-                <div class="visa">
-                    <label><img style="height: 50px;" src="../../assets/icons/payment/visa.png"></label><br>
-                    <input type="checkbox" id="cbox1" value="first_checkbox">
-                </div>
-                <div class="mastercard">
-                    <label><img style="height: 50px;" src="../assets/icons/payment/mastercard.jpg"></label><br>
-                    <input type="checkbox" id="cbox1" value="first_checkbox">
-                </div>
-                <div class="paypal">
-                    <label><img style="height: 50px;" src="../assets/icons/payment/paypal.png"></label><br>
-                    <input type="checkbox" id="cbox1" value="first_checkbox">
-                </div>
-            </div>
-            <label>Name</label><br>
-            <input type="text" name="Name" placeholder="John Doe"><br><br>
-            <label>Card Number</label><br>
-            <input type="text" id="cr_no" name="card-no" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"><br><br>
-            <label>Expiry Date</label><br>
-            <input type="text" id="exp" name="expdate" placeholder="MM/YY" minlength="5" maxlength="5"><br><br>
-            <label>CVV</label><br>
-            <input type="password" name="cvv" placeholder="123" minlength="3" maxlength="3"><br><br>
-            <label>Direccion</label><br>
-            <input type="text" name="Name" placeholder="Direccion"><br><br>
-        </form>
-    </div>`,
-
-        showCloseButton: true,
-        showCancelButton: false,
-        focusConfirm: false,
-        confirmButtonText:
-            `Pagar`,
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-        cancelButtonText:
-            '<i class="fa fa-thumbs-down"></i>',
-        cancelButtonAriaLabel: 'Thumbs down'
-    });
-    cartProducto.length != 0 ? cartProducto.length = 0 : null;
-    const totalAcumulado = document.getElementById("totalAcumulado");
-    totalAcumulado.innerText = cartProducto
-        .map((item) => item.precio * item.cantidad * 0)
-        .reduce((prev, current) => prev + current, totalProductos);
-
+    cartProducto.splice(0, 9999999);
+    localStorage.setItem("cartProducto", JSON.stringify(cartProducto));
     actualizarStorage(cartProducto);
     buildProductosCart();
 }

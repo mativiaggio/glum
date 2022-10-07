@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GLUM - Payment</title>
@@ -9,8 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
     <link rel="manifest" href="../assets/ico/site.webmanifest">
-  </head>
-<body>
+</head>
+<body class="container-fluid">
     <nav class="row">
         <div class="col gx-0">
             <div class="navbar navbar-expand-lg fixed-top">
@@ -52,33 +53,83 @@
             </div>
         </div>
     </nav>
-    <div class="payment-container">
-        <form action="post">
-            <div class="form-payment-container">
-                <div class="visa">
-                    <label class="form-check-label" for="exampleRadios1"><img style="height: 50px;" src="../assets/icons/payment/visa.png"></label><br>
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                </div>
-                <div class="mastercard">
-                    <label class="form-check-label" for="exampleRadios2"><img style="height: 50px;" src="../assets/icons/payment/mastercard.jpg"></label><br>
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                </div>
-                <div class="paypal">
-                    <label class="form-check-label" for="exampleRadios3"><img style="height: 50px;" src="../assets/icons/payment/paypal.png"></label><br>
-                    <input  class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                </div>
+    <div class="payment-container row">
+        <div class="col-12 checkout-container">
+            <div class="container">
+                <form class="row" action="./pymt-success.html">
+                    <div class="dirDeFact col-lg-6 col-md-12">
+                        <h3>Direccion de facturacion</h3>
+                        <div class="fn-container">
+                            <label for="nombrecompleto">Nombre completo:</label>
+                            <input  required type="text" name="nombrecompleto" id="nombrecompleto" placeholder="John Doe" maxlength="20" >
+                        </div>
+                        <div class="email-container">
+                            <label for="email">Email:</label>
+                            <input  required type="email" name="email" id="email" placeholder="ejemplo@gmail.com" >
+                        </div>
+                        <div class="direc-container">
+                            <label for="direccion">Direccion:</label>
+                            <input  required type="text" name="direccion" id="address" placeholder="Calle falsa 123" >
+                        </div>
+                        <div class="ciudad-container">
+                            <label for="ciudad">Ciudad:</label>
+                            <input  required type="text" name="ciudad" id="ciudad" placeholder="Lujan" >
+                        </div>
+                        <div class="pv-cp-container d-flex">
+                            <div class="provincia-container">
+                                <label for="provincia">Provincia:</label>
+                                <input  required type="text" name="provincia" id="provincia" placeholder="Buenos Aires" >
+                            </div>
+                            <div class="cp-container">
+                                <label for="cp">Codigo postal:</label>
+                                <input  required type="text" name="cp" id="cp" placeholder="6700" minlength="4" maxlength="5" onkeypress="return event.charCode>=48 && event.charCode<=57" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="datosDeFact col-lg-6 col-sm-12">
+                        <h3>Datos de facturacion</h3>
+                        <div class="tarjetas-container">
+                            <label for="nombrecompleto">Tarjetas aceptadas:</label>
+                            <div class="tarjetas d-flex">
+                                <img style="height: 30px;" src="../assets/icons/payment/visa.png">
+                                <img style="height: 30px;" src="../assets/icons/payment/mastercard.jpg">
+                                <img style="height: 30px;" src="../assets/icons/payment/paypal.png">
+                            </div>
+                        </div>
+                        <div class="fnc-container">
+                            <label for="nombreentarjeta">Nombre en tarjeta:</label>
+                            <input  required type="text" name="nombreentarjeta" id="nombreentarjeta" placeholder="John Doe" >
+                        </div>
+                        <div class="cc-number">
+                            <label for="cc-number">Numero de tarjeta:</label>
+                            <input  required type="text" name="cc-number" id="cc-number" placeholder="0000-0000-0000-0000" maxlength="16" onkeypress="return event.charCode>=48 && event.charCode<=57" >
+                        </div>
+                        <div class="venc-container">
+                            <label for="venc">Mes:</label>
+                            <input  required type="month" name="venc" id="venc" placeholder="Enero" >
+                        </div>
+                        <div class="yearCvv d-flex">
+                            <div class="cp-container">
+                                <label for="cp">Año:</label>
+                                <input  required type="text" name="cp" id="cp" placeholder="24" minlength="2" maxlength="2" onkeypress="return event.charCode>=48 && event.charCode<=57">
+                            </div>
+                            <div class="cp-container">
+                                <label for="cp">CVV:</label>
+                                <input  required type="password" name="cp" id="cp" placeholder="123" minlength="3" maxlength="3" onkeypress="return event.charCode>=48 && event.charCode<=57">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-btn col-12 gx-0">
+                        <input type="submit" value="FINALIZAR COMPRA" class="checkout" onClick="pagar()">
+                    </div>
+                </form>
             </div>
-            <label>Name</label><br>
-            <input type="text" name="Name" placeholder="John Doe"><br><br>
-            <label>Card Number</label><br>
-            <input type="text" id="cr_no" name="card-no" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"><br><br>
-            <label>Expiry Date</label><br>
-            <input type="text" id="exp" name="expdate" placeholder="MM/YY" minlength="5" maxlength="5"><br><br>
-            <label>CVV</label><br>
-            <input type="password" name="cvv" placeholder="123" minlength="3" maxlength="3"><br><br>
-            <label>Direccion</label><br>
-            <input type="text" name="Name" placeholder="Direccion"><br><br>
-        </form>
+        </div>
     </div>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- PERSONAL JS -->
+    <script async type="module" src="../js/menu-main.js"></script>
 </body>
 </html>

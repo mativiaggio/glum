@@ -1080,32 +1080,134 @@ footer .footer-navbar p {
 }
 
 .payment-container {
-  margin-top: 80px;
-}
-.payment-container form {
+  padding-top: 60px;
+  min-height: 100vh;
+  max-height: fit-content;
+  background-color: hsl(0deg, 0%, 85%);
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-container .checkout-container form {
+  display: flex;
+  background-color: white;
+  height: fit-content;
+  border-radius: 10px 10px 10px 10px;
+}
+.payment-container .checkout-container form .dirDeFact {
+  height: 100%;
+}
+.payment-container .checkout-container form .dirDeFact h3 {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.payment-container .checkout-container form .dirDeFact .fn-container, .payment-container .checkout-container form .dirDeFact .email-container, .payment-container .checkout-container form .dirDeFact .direc-container, .payment-container .checkout-container form .dirDeFact .ciudad-container, .payment-container .checkout-container form .dirDeFact .provincia-container, .payment-container .checkout-container form .dirDeFact .cp-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-bottom: 2.5%;
+}
+.payment-container .checkout-container form .dirDeFact label {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.payment-container .checkout-container form .dirDeFact input {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.payment-container .checkout-container form .dirDeFact .pv-cp-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  justify-content: space-between;
+}
+.payment-container .checkout-container form .dirDeFact .pv-cp-container label, .payment-container .checkout-container form .dirDeFact .pv-cp-container input {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+@media screen and (max-width: 62em) {
+  .payment-container .checkout-container form .dirDeFact .pv-cp-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.payment-container .checkout-container form .datosDeFact h3 {
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.payment-container .checkout-container form .datosDeFact .tarjetas-container, .payment-container .checkout-container form .datosDeFact .fnc-container, .payment-container .checkout-container form .datosDeFact .cc-number, .payment-container .checkout-container form .datosDeFact .venc-container, .payment-container .checkout-container form .datosDeFact .cp-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-bottom: 2.5%;
+}
+.payment-container .checkout-container form .datosDeFact label {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.payment-container .checkout-container form .datosDeFact input {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.payment-container .checkout-container form .datosDeFact .tarjetas {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 30px;
+}
+.payment-container .checkout-container form .datosDeFact .tarjetas img {
+  margin-right: 2.5%;
+}
+.payment-container .checkout-container form .datosDeFact .yearCvv {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  justify-content: space-between;
+}
+.payment-container .checkout-container form .datosDeFact .yearCvv label, .payment-container .checkout-container form .datosDeFact .yearCvv input {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+@media screen and (max-width: 62em) {
+  .payment-container .checkout-container form .datosDeFact .yearCvv {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.payment-container .checkout-container .checkout-btn {
+  height: 50px;
+}
+.payment-container .checkout-container .checkout-btn .checkout {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  background-color: hsl(206deg, 97%, 15%);
+  color: white;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.thanks {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-.payment-container form .form-payment-container {
-  display: flex;
-}
-.payment-container form .form-payment-container div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.payment-container form label {
+.thanks h2 {
   color: hsl(206deg, 97%, 15%);
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
-.payment-container form input {
-  margin-bottom: 5px;
+.thanks p {
+  color: hsl(206deg, 97%, 15%);
+  font-weight: 400;
 }
+.thanks #entrega {
+  font-size: x-large;
+  font-weight: 700;
+}
+
+/*  * {
+  outline: 1px solid red;
+} */
 
 /*# sourceMappingURL=style.css.map */

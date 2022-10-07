@@ -2,6 +2,7 @@
 @use './index-folder-styles/' as *;
 @use './menu-folder-styles/' as *;
 @use './cart-folder-styles/' as *;
+@use './payment-folder-styles/' as *;
 
 /* Box sizing rules */
 *,
@@ -289,39 +290,29 @@ footer {
 }
 
 .payment-container {
-  margin-top: 80px;
+  @include payment-container
+}
 
-  form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    .form-payment-container {
-      display: flex;
-
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5px;
-      }
-    }
-
-    label {
-      color: $clr-main-dark;
-      text-transform: uppercase;
-      font-family: $ff-body;
-      font-weight: 600;
-    }
-
-    input {
-      margin-bottom: 5px;
-    }
+.thanks {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: $clr-main-dark;
+    font-weight: 600;
+  }
+  p {
+    color: $clr-main-dark;
+    font-weight: 400;
+  }
+  #entrega {
+    font-size: x-large;
+    font-weight: 700;
   }
 }
 
-//  * {
-//   outline: 1px solid red;
-// }
+/*  * {
+  outline: 1px solid red;
+} */
