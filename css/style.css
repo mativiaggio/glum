@@ -1101,6 +1101,9 @@ footer .footer-navbar p {
 .payment-container .checkout-container form .dirDeFact h3 {
   margin-left: 5%;
   margin-top: 5%;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 .payment-container .checkout-container form .dirDeFact .fn-container,
 .payment-container .checkout-container form .dirDeFact .email-container,
@@ -1116,10 +1119,19 @@ footer .footer-navbar p {
 .payment-container .checkout-container form .dirDeFact label {
   margin-left: 5%;
   margin-right: 5%;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 .payment-container .checkout-container form .dirDeFact input {
   margin-left: 5%;
   margin-right: 5%;
+  border: 1px solid hsl(206deg, 97%, 15%);
+  border-radius: 50px;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-indent: 10px;
 }
 .payment-container .checkout-container form .dirDeFact .pv-cp-container {
   margin-left: 5%;
@@ -1141,6 +1153,9 @@ footer .footer-navbar p {
 .payment-container .checkout-container form .datosDeFact h3 {
   margin-left: 5%;
   margin-top: 5%;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 .payment-container .checkout-container form .datosDeFact .tarjetas-container,
 .payment-container .checkout-container form .datosDeFact .fnc-container,
@@ -1155,10 +1170,19 @@ footer .footer-navbar p {
 .payment-container .checkout-container form .datosDeFact label {
   margin-left: 5%;
   margin-right: 5%;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 .payment-container .checkout-container form .datosDeFact input {
   margin-left: 5%;
   margin-right: 5%;
+  border: 1px solid hsl(206deg, 97%, 15%);
+  border-radius: 50px;
+  color: hsl(206deg, 97%, 15%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-indent: 10px;
 }
 .payment-container .checkout-container form .datosDeFact .tarjetas {
   margin-left: 5%;
