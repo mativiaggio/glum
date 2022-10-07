@@ -323,16 +323,22 @@ main .info-bar .icons-info {
     flex-direction: column;
   }
 }
-main .info-bar .icons-info .info-1, main .info-bar .icons-info .info-2, main .info-bar .icons-info .info-3 {
+main .info-bar .icons-info .info-1,
+main .info-bar .icons-info .info-2,
+main .info-bar .icons-info .info-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 150px;
 }
-main .info-bar .icons-info .info-1 img, main .info-bar .icons-info .info-2 img, main .info-bar .icons-info .info-3 img {
+main .info-bar .icons-info .info-1 img,
+main .info-bar .icons-info .info-2 img,
+main .info-bar .icons-info .info-3 img {
   height: 50px;
 }
-main .info-bar .icons-info .info-1 p, main .info-bar .icons-info .info-2 p, main .info-bar .icons-info .info-3 p {
+main .info-bar .icons-info .info-1 p,
+main .info-bar .icons-info .info-2 p,
+main .info-bar .icons-info .info-3 p {
   width: 200px;
   font-weight: 700;
   font-size: 15px;
@@ -874,7 +880,9 @@ footer .footer-navbar p {
     margin-top: 15px;
   }
 }
-.cart-main-container .cart-container .cart-row .cart-price, .cart-main-container .cart-container .cart-row .cart-total-price, .cart-main-container .cart-container .cart-row .cart-quant {
+.cart-main-container .cart-container .cart-row .cart-price,
+.cart-main-container .cart-container .cart-row .cart-total-price,
+.cart-main-container .cart-container .cart-row .cart-quant {
   font-family: "Montserrat", sans-serif;
   color: hsl(206deg, 97%, 15%);
   font-weight: 600;
@@ -1094,7 +1102,12 @@ footer .footer-navbar p {
   margin-left: 5%;
   margin-top: 5%;
 }
-.payment-container .checkout-container form .dirDeFact .fn-container, .payment-container .checkout-container form .dirDeFact .email-container, .payment-container .checkout-container form .dirDeFact .direc-container, .payment-container .checkout-container form .dirDeFact .ciudad-container, .payment-container .checkout-container form .dirDeFact .provincia-container, .payment-container .checkout-container form .dirDeFact .cp-container {
+.payment-container .checkout-container form .dirDeFact .fn-container,
+.payment-container .checkout-container form .dirDeFact .email-container,
+.payment-container .checkout-container form .dirDeFact .direc-container,
+.payment-container .checkout-container form .dirDeFact .ciudad-container,
+.payment-container .checkout-container form .dirDeFact .provincia-container,
+.payment-container .checkout-container form .dirDeFact .cp-container {
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -1114,7 +1127,8 @@ footer .footer-navbar p {
   margin-bottom: 5%;
   justify-content: space-between;
 }
-.payment-container .checkout-container form .dirDeFact .pv-cp-container label, .payment-container .checkout-container form .dirDeFact .pv-cp-container input {
+.payment-container .checkout-container form .dirDeFact .pv-cp-container label,
+.payment-container .checkout-container form .dirDeFact .pv-cp-container input {
   margin-left: 0%;
   margin-right: 0%;
 }
@@ -1128,7 +1142,11 @@ footer .footer-navbar p {
   margin-left: 5%;
   margin-top: 5%;
 }
-.payment-container .checkout-container form .datosDeFact .tarjetas-container, .payment-container .checkout-container form .datosDeFact .fnc-container, .payment-container .checkout-container form .datosDeFact .cc-number, .payment-container .checkout-container form .datosDeFact .venc-container, .payment-container .checkout-container form .datosDeFact .cp-container {
+.payment-container .checkout-container form .datosDeFact .tarjetas-container,
+.payment-container .checkout-container form .datosDeFact .fnc-container,
+.payment-container .checkout-container form .datosDeFact .cc-number,
+.payment-container .checkout-container form .datosDeFact .venc-container,
+.payment-container .checkout-container form .datosDeFact .cp-container {
   display: flex;
   flex-direction: column;
   height: fit-content;
@@ -1156,7 +1174,8 @@ footer .footer-navbar p {
   margin-bottom: 5%;
   justify-content: space-between;
 }
-.payment-container .checkout-container form .datosDeFact .yearCvv label, .payment-container .checkout-container form .datosDeFact .yearCvv input {
+.payment-container .checkout-container form .datosDeFact .yearCvv label,
+.payment-container .checkout-container form .datosDeFact .yearCvv input {
   margin-left: 0%;
   margin-right: 0%;
 }

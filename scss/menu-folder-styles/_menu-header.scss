@@ -5,13 +5,16 @@
   height: fit-content;
   padding-top: 65px;
   margin-bottom: 15px;
+
   .nm-title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .title-icon-container {
       width: fit-content;
       padding-top: 15px;
+
       h1 {
         font-family: 'Montserrat';
         font-style: normal;
@@ -20,16 +23,20 @@
         line-height: 59px;
         color: $clr-main-font;
         text-transform: uppercase;
-        @media screen and (max-width: 64em){
+
+        @media screen and (max-width: 64em) {
           font-size: 34px;
         }
       }
+
       .menu-title-icons {
         display: flex;
         justify-content: space-between;
+
         img {
           height: 25px;
-          @media screen and (max-width: 64em){
+
+          @media screen and (max-width: 64em) {
             height: 18px;
           }
         }
@@ -37,6 +44,7 @@
     }
   }
 }
+
 .item-menu-row {
-    height: 100vh;
+  height: 100vh;
 }

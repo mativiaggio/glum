@@ -114,6 +114,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
       height: 30px;
       width: 30px;
@@ -286,14 +287,17 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   h2 {
     color: $clr-main-dark;
     font-weight: 600;
   }
+
   p {
     color: $clr-main-dark;
     font-weight: 400;
   }
+
   #entrega {
     font-size: x-large;
     font-weight: 700;

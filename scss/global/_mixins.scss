@@ -2,7 +2,7 @@
 @use './fonts' as *;
 
 
-@mixin all-center ($direction){
+@mixin all-center ($direction) {
     display: flex;
     flex-direction: $direction;
     justify-content: center;
@@ -11,7 +11,7 @@
 
 @mixin bg-pic-config ($attach) {
     background-repeat: no-repeat !important;
-    background-attachment: $attach !important;
+    background-attachment: $attach  !important;
     background-position: center center !important;
     z-index: auto;
     background-size: cover !important;

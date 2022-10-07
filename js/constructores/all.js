@@ -141,7 +141,7 @@ window.addToCart = (productoId) => {
                 const productoAgregar = array[productoId];
                 productoAgregar.cantidad = 1;
                 cartProducto.push(productoAgregar);
-        
+
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'bottom-end',
@@ -153,17 +153,17 @@ window.addToCart = (productoId) => {
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                 })
-        
+
                 Toast.fire({
                     icon: 'success',
                     title: 'Producto agregado al carrito!'
                 })
-        
+
                 actualizarStorage(cartProducto);
                 buildProductosCart();
             } else {
                 cartProducto[productIdFinded].cantidad++;
-        
+
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'bottom-end',
@@ -175,12 +175,12 @@ window.addToCart = (productoId) => {
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                 })
-        
+
                 Toast.fire({
                     icon: 'success',
                     title: 'Producto agregado al carrito!'
                 })
-        
+
                 actualizarStorage(cartProducto);
                 buildProductosCart();
             }
@@ -189,7 +189,7 @@ window.addToCart = (productoId) => {
 
 // AGREGAR UNA UNIDAD
 window.addOneMore = (productoIndex) => {
-    cartProducto[productoIndex].cantidad ++;
+    cartProducto[productoIndex].cantidad++;
     actualizarStorage(cartProducto);
     buildProductosCart();
 }
@@ -197,7 +197,7 @@ window.addOneMore = (productoIndex) => {
 // ELIMINAR UNA UNIDAD
 window.removeOne = (productoIndex) => {
     while (cartProducto[productoIndex].cantidad > 1) {
-        cartProducto[productoIndex].cantidad --;
+        cartProducto[productoIndex].cantidad--;
         actualizarStorage(cartProducto);
         buildProductosCart();
         break;
